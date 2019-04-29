@@ -34,3 +34,290 @@
 2019-04-28 20:59:54.703  INFO 10414 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2019-04-28 20:59:54.707  INFO 10414 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2019-04-28 20:59:54.744  INFO 10414 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-29 10:27:36.866  INFO 16715 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Starting Tp02PintorCarlosApplicationTests on carlos-All-Series with PID 16715 (started by carlos in /home/carlos/dev/diplomatura/java-web-avanzado/TP02-PintorCarlos)
+2019-04-29 10:27:36.875  INFO 16715 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : No active profile set, falling back to default profiles: default
+2019-04-29 10:27:41.742  INFO 16715 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-29 10:27:41.901  INFO 16715 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 149ms. Found 1 repository interfaces.
+2019-04-29 10:27:42.787  INFO 16715 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9b573f02] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-29 10:27:43.373  INFO 16715 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-29 10:27:44.820  INFO 16715 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-29 10:27:45.109  INFO 16715 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-29 10:27:45.235  INFO 16715 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-04-29 10:27:45.237  INFO 16715 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-04-29 10:27:45.709  INFO 16715 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-29 10:27:46.027  INFO 16715 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-04-29 10:27:46.375  INFO 16715 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-04-29 10:27:46.381  INFO 16715 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@4a216eb4
+2019-04-29 10:27:48.451  INFO 16715 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-29 10:27:54.773  INFO 16715 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-29 10:27:55.493  WARN 16715 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-29 10:27:56.057  WARN 16715 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-29 10:27:57.593  INFO 16715 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Started Tp02PintorCarlosApplicationTests in 22.511 seconds (JVM running for 32.823)
+2019-04-29 10:27:59.325  INFO 16715 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestCreate - Start
+2019-04-29 10:27:59.325  INFO 16715 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Creando cliente... Cliente [id=null, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO]
+2019-04-29 10:28:01.138  INFO 16715 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Borrando cliente... 52
+2019-04-29 10:28:01.180  INFO 16715 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestCreate - End
+2019-04-29 10:28:01.209  INFO 16715 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestDelete - Start
+2019-04-29 10:28:01.209  INFO 16715 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Creando cliente... Cliente [id=null, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO]
+2019-04-29 10:28:01.324  INFO 16715 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestDelete - End
+2019-04-29 10:28:01.382  INFO 16715 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestUpdate - Start
+2019-04-29 10:28:01.382  INFO 16715 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Creando cliente... Cliente [id=null, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO]
+2019-04-29 10:28:01.483  INFO 16715 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Borrando cliente... 54
+2019-04-29 10:28:01.529  INFO 16715 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestUpdate - End
+2019-04-29 10:28:01.926  INFO 16715 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-29 10:28:01.927  INFO 16715 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-29 10:28:01.946  INFO 16715 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-29 10:28:02.012  INFO 16715 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-29 11:15:37.504  INFO 19155 --- [main] a.e.u.virtual.test.cliente.ClienteTest   : Starting ClienteTest on carlos-All-Series with PID 19155 (started by carlos in /home/carlos/dev/diplomatura/java-web-avanzado/TP02-PintorCarlos)
+2019-04-29 11:15:37.520  INFO 19155 --- [main] a.e.u.virtual.test.cliente.ClienteTest   : No active profile set, falling back to default profiles: default
+2019-04-29 11:15:41.496  INFO 19155 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-29 11:15:41.583  INFO 19155 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74ms. Found 1 repository interfaces.
+2019-04-29 11:15:42.380  INFO 19155 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3eab8e76] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-29 11:15:43.041  INFO 19155 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-29 11:15:44.893  INFO 19155 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-29 11:15:45.149  INFO 19155 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-29 11:15:45.336  INFO 19155 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-04-29 11:15:45.338  INFO 19155 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-04-29 11:15:45.831  INFO 19155 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-29 11:15:46.197  INFO 19155 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-04-29 11:15:46.759  INFO 19155 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-04-29 11:15:46.765  INFO 19155 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@45801322
+2019-04-29 11:15:48.053  INFO 19155 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-29 11:15:51.309  INFO 19155 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-29 11:15:53.011  WARN 19155 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-29 11:15:53.430  WARN 19155 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-29 11:15:57.770  INFO 19155 --- [main] a.e.u.virtual.test.cliente.ClienteTest   : Started ClienteTest in 21.58 seconds (JVM running for 25.127)
+2019-04-29 11:16:00.346 ERROR 19155 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@78691363] to prepare test instance [ar.edu.unju.virtual.test.cliente.ClienteTest@1331d6fd]
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ar.edu.unju.virtual.test.cliente.ClienteTest': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ar.edu.unju.virtual.TP02PintorCarlos.model.service.ClienteService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:391) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:119) ~[spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:44) ~[spring-boot-test-autoconfigure-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246) ~[spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) ~[spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) ~[spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) ~[spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) ~[spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) ~[spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) ~[spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209) ~[.cp/:na]
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'ar.edu.unju.virtual.TP02PintorCarlos.model.service.ClienteService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1654) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1213) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	... 29 common frames omitted
+
+2019-04-29 11:16:01.901  INFO 19155 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-29 11:16:01.902  INFO 19155 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-29 11:16:03.053  INFO 19155 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-29 11:16:04.762  INFO 19155 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-29 11:18:07.516  INFO 19367 --- [main] a.e.u.virtual.test.cliente.ClienteTest   : Starting ClienteTest on carlos-All-Series with PID 19367 (started by carlos in /home/carlos/dev/diplomatura/java-web-avanzado/TP02-PintorCarlos)
+2019-04-29 11:18:07.517  INFO 19367 --- [main] a.e.u.virtual.test.cliente.ClienteTest   : No active profile set, falling back to default profiles: default
+2019-04-29 11:18:09.592  INFO 19367 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-29 11:18:09.682  INFO 19367 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83ms. Found 1 repository interfaces.
+2019-04-29 11:18:10.366  INFO 19367 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c70f1c38] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-29 11:18:10.798  INFO 19367 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-29 11:18:11.843  INFO 19367 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-29 11:18:12.067  INFO 19367 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-29 11:18:12.221  INFO 19367 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-04-29 11:18:12.222  INFO 19367 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-04-29 11:18:12.584  INFO 19367 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-29 11:18:12.900  INFO 19367 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-04-29 11:18:13.104  INFO 19367 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-04-29 11:18:13.112  INFO 19367 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@4a216eb4
+2019-04-29 11:18:14.082  INFO 19367 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-29 11:18:15.813  INFO 19367 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-29 11:18:15.891  WARN 19367 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-29 11:18:16.071  WARN 19367 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-29 11:18:16.501  INFO 19367 --- [main] a.e.u.virtual.test.cliente.ClienteTest   : Started ClienteTest in 10.517 seconds (JVM running for 13.396)
+2019-04-29 11:18:16.886  INFO 19367 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-29 11:18:16.900  INFO 19367 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-29 11:18:16.906  INFO 19367 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-29 11:18:16.964  INFO 19367 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-29 11:19:18.333  INFO 19440 --- [main] a.e.u.virtual.test.cliente.ClienteTest   : Starting ClienteTest on carlos-All-Series with PID 19440 (started by carlos in /home/carlos/dev/diplomatura/java-web-avanzado/TP02-PintorCarlos)
+2019-04-29 11:19:18.334  INFO 19440 --- [main] a.e.u.virtual.test.cliente.ClienteTest   : No active profile set, falling back to default profiles: default
+2019-04-29 11:19:19.688  INFO 19440 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-29 11:19:19.765  INFO 19440 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66ms. Found 1 repository interfaces.
+2019-04-29 11:19:20.362  INFO 19440 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bf37105b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-29 11:19:20.655  INFO 19440 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-29 11:19:20.927  INFO 19440 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-29 11:19:21.037  INFO 19440 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-29 11:19:21.115  INFO 19440 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-04-29 11:19:21.117  INFO 19440 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-04-29 11:19:21.313  INFO 19440 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-29 11:19:21.451  INFO 19440 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-04-29 11:19:21.703  INFO 19440 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-04-29 11:19:21.709  INFO 19440 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@44d7e24
+2019-04-29 11:19:22.383  INFO 19440 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-29 11:19:23.560  INFO 19440 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-29 11:19:23.639  WARN 19440 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-29 11:19:23.822  WARN 19440 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-29 11:19:24.119  INFO 19440 --- [main] a.e.u.virtual.test.cliente.ClienteTest   : Started ClienteTest in 6.336 seconds (JVM running for 7.225)
+2019-04-29 11:19:24.379  INFO 19440 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-29 11:19:24.384  INFO 19440 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-29 11:19:24.391  INFO 19440 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-29 11:19:24.429  INFO 19440 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-29 11:20:19.838  INFO 19507 --- [main] a.e.u.virtual.test.cliente.ClienteTest   : Starting ClienteTest on carlos-All-Series with PID 19507 (started by carlos in /home/carlos/dev/diplomatura/java-web-avanzado/TP02-PintorCarlos)
+2019-04-29 11:20:19.840  INFO 19507 --- [main] a.e.u.virtual.test.cliente.ClienteTest   : No active profile set, falling back to default profiles: default
+2019-04-29 11:20:20.880  INFO 19507 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-29 11:20:20.944  INFO 19507 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57ms. Found 1 repository interfaces.
+2019-04-29 11:20:21.566  INFO 19507 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5ce5f4b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-29 11:20:21.868  INFO 19507 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-29 11:20:22.201  INFO 19507 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-29 11:20:22.364  INFO 19507 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-29 11:20:22.440  INFO 19507 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-04-29 11:20:22.442  INFO 19507 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-04-29 11:20:22.626  INFO 19507 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-29 11:20:22.762  INFO 19507 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-04-29 11:20:22.993  INFO 19507 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-04-29 11:20:22.999  INFO 19507 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@31aab981
+2019-04-29 11:20:23.672  INFO 19507 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-29 11:20:24.752  INFO 19507 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-29 11:20:24.802  WARN 19507 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-29 11:20:24.933  WARN 19507 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-29 11:20:25.194  INFO 19507 --- [main] a.e.u.virtual.test.cliente.ClienteTest   : Started ClienteTest in 6.17 seconds (JVM running for 7.033)
+2019-04-29 11:20:25.361  INFO 19507 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-29 11:20:25.365  INFO 19507 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-29 11:20:25.373  INFO 19507 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-29 11:20:25.426  INFO 19507 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-29 11:25:25.088  INFO 19701 --- [main] a.e.u.virtual.test.cliente.ClienteTest   : Starting ClienteTest on carlos-All-Series with PID 19701 (started by carlos in /home/carlos/dev/diplomatura/java-web-avanzado/TP02-PintorCarlos)
+2019-04-29 11:25:25.091  INFO 19701 --- [main] a.e.u.virtual.test.cliente.ClienteTest   : No active profile set, falling back to default profiles: default
+2019-04-29 11:25:26.467  INFO 19701 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-29 11:25:26.575  INFO 19701 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94ms. Found 1 repository interfaces.
+2019-04-29 11:25:27.135  INFO 19701 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c70f1c38] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-29 11:25:27.424  INFO 19701 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-29 11:25:27.680  INFO 19701 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-29 11:25:27.819  INFO 19701 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-29 11:25:27.914  INFO 19701 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-04-29 11:25:27.916  INFO 19701 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-04-29 11:25:28.093  INFO 19701 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-29 11:25:28.222  INFO 19701 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-04-29 11:25:28.446  INFO 19701 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-04-29 11:25:28.453  INFO 19701 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@4a216eb4
+2019-04-29 11:25:29.157  INFO 19701 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-29 11:25:30.236  INFO 19701 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-29 11:25:30.287  WARN 19701 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-29 11:25:30.422  WARN 19701 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-29 11:25:30.791  INFO 19701 --- [main] a.e.u.virtual.test.cliente.ClienteTest   : Started ClienteTest in 6.275 seconds (JVM running for 7.211)
+2019-04-29 11:25:30.994  INFO 19701 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-29 11:25:30.996  INFO 19701 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-29 11:25:30.998  INFO 19701 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-29 11:25:31.050  INFO 19701 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-29 12:32:55.579  INFO 22214 --- [main] a.e.u.virtual.test.cliente.ClienteTest   : Starting ClienteTest on carlos-All-Series with PID 22214 (started by carlos in /home/carlos/dev/diplomatura/java-web-avanzado/TP02-PintorCarlos)
+2019-04-29 12:32:55.597  INFO 22214 --- [main] a.e.u.virtual.test.cliente.ClienteTest   : No active profile set, falling back to default profiles: default
+2019-04-29 12:32:57.131  INFO 22214 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-29 12:32:57.223  INFO 22214 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82ms. Found 2 repository interfaces.
+2019-04-29 12:32:57.766  INFO 22214 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bf3a1168] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-29 12:32:58.078  INFO 22214 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-29 12:32:58.372  INFO 22214 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-29 12:32:58.483  INFO 22214 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-29 12:32:58.661  INFO 22214 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-04-29 12:32:58.751  INFO 22214 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-04-29 12:32:59.113  INFO 22214 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-29 12:32:59.425  INFO 22214 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-04-29 12:32:59.708  INFO 22214 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-04-29 12:32:59.713  INFO 22214 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@3312f4f4
+2019-04-29 12:33:00.417  INFO 22214 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta (class must be instantiated by Interceptor)
+2019-04-29 12:33:00.995  INFO 22214 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-29 12:33:02.488  INFO 22214 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-29 12:33:02.610  WARN 22214 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-29 12:33:02.773  WARN 22214 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-29 12:33:03.502  INFO 22214 --- [main] a.e.u.virtual.test.cliente.ClienteTest   : Started ClienteTest in 8.453 seconds (JVM running for 9.601)
+2019-04-29 12:33:04.164  WARN 22214 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23502
+2019-04-29 12:33:04.165 ERROR 22214 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: null value in column "id_cliente" violates not-null constraint
+  Detail: Failing row contains (6, 11111111111111111111, 2019-01-01, 50000, HABILITADO, 5000, null).
+2019-04-29 12:33:04.168 ERROR 22214 --- [main] o.h.i.ExceptionMapperStandardImpl        : HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2019-04-29 12:33:04.274  INFO 22214 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-29 12:33:04.279  INFO 22214 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-29 12:33:04.297  INFO 22214 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-29 12:33:04.366  INFO 22214 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-29 12:35:48.302  INFO 22411 --- [main] a.e.u.virtual.test.cliente.ClienteTest   : Starting ClienteTest on carlos-All-Series with PID 22411 (started by carlos in /home/carlos/dev/diplomatura/java-web-avanzado/TP02-PintorCarlos)
+2019-04-29 12:35:48.303  INFO 22411 --- [main] a.e.u.virtual.test.cliente.ClienteTest   : No active profile set, falling back to default profiles: default
+2019-04-29 12:35:50.127  INFO 22411 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-29 12:35:50.203  INFO 22411 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70ms. Found 2 repository interfaces.
+2019-04-29 12:35:50.752  INFO 22411 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7cd4d130] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-29 12:35:51.025  INFO 22411 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-29 12:35:51.305  INFO 22411 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-29 12:35:51.444  INFO 22411 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-29 12:35:51.537  INFO 22411 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-04-29 12:35:51.539  INFO 22411 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-04-29 12:35:51.717  INFO 22411 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-29 12:35:51.839  INFO 22411 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-04-29 12:35:52.091  INFO 22411 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-04-29 12:35:52.097  INFO 22411 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@4b9dbf07
+2019-04-29 12:35:52.574  INFO 22411 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta (class must be instantiated by Interceptor)
+2019-04-29 12:35:52.729  INFO 22411 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-29 12:35:53.880  INFO 22411 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-29 12:35:53.947  WARN 22411 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-29 12:35:54.134  WARN 22411 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-29 12:35:54.474  INFO 22411 --- [main] a.e.u.virtual.test.cliente.ClienteTest   : Started ClienteTest in 6.908 seconds (JVM running for 7.651)
+2019-04-29 12:35:54.679  WARN 22411 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+2019-04-29 12:35:54.679 ERROR 22411 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: duplicate key value violates unique constraint "dni_uk"
+  Detail: Key (dni)=(12345678) already exists.
+2019-04-29 12:35:54.683 ERROR 22411 --- [main] o.h.i.ExceptionMapperStandardImpl        : HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2019-04-29 12:35:54.727  INFO 22411 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-29 12:35:54.729  INFO 22411 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-29 12:35:54.735  INFO 22411 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-29 12:35:54.795  INFO 22411 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-29 12:36:50.729  INFO 22472 --- [main] a.e.u.virtual.test.cliente.ClienteTest   : Starting ClienteTest on carlos-All-Series with PID 22472 (started by carlos in /home/carlos/dev/diplomatura/java-web-avanzado/TP02-PintorCarlos)
+2019-04-29 12:36:50.734  INFO 22472 --- [main] a.e.u.virtual.test.cliente.ClienteTest   : No active profile set, falling back to default profiles: default
+2019-04-29 12:36:52.249  INFO 22472 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-29 12:36:52.303  INFO 22472 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46ms. Found 2 repository interfaces.
+2019-04-29 12:36:52.864  INFO 22472 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7cd4d130] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-29 12:36:53.159  INFO 22472 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-29 12:36:53.431  INFO 22472 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-29 12:36:53.572  INFO 22472 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-29 12:36:53.653  INFO 22472 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-04-29 12:36:53.663  INFO 22472 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-04-29 12:36:53.869  INFO 22472 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-29 12:36:53.990  INFO 22472 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-04-29 12:36:54.211  INFO 22472 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-04-29 12:36:54.228  INFO 22472 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@4d518c66
+2019-04-29 12:36:54.722  INFO 22472 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta (class must be instantiated by Interceptor)
+2019-04-29 12:36:54.892  INFO 22472 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-29 12:36:56.032  INFO 22472 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-29 12:36:56.099  WARN 22472 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-29 12:36:56.255  WARN 22472 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-29 12:36:56.642  INFO 22472 --- [main] a.e.u.virtual.test.cliente.ClienteTest   : Started ClienteTest in 6.422 seconds (JVM running for 7.668)
+2019-04-29 12:36:56.928  INFO 22472 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-29 12:36:56.932  INFO 22472 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-29 12:36:56.935  INFO 22472 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-29 12:36:56.978  INFO 22472 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

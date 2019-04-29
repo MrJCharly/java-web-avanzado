@@ -36,7 +36,17 @@ public class Cuenta {
   @JoinColumn(name="id_cliente", nullable = false)
   private Cliente titular;
 
-  public Long getId() {
+	public Cuenta(String numero, Timestamp fechaIngreso, Double saldoActual, String estado, Long limiteExtraccion, Cliente titular) {
+		super();
+		this.numero = numero;
+		this.fechaIngreso = fechaIngreso;
+		this.saldoActual = saldoActual;
+		this.estado = estado;
+		this.limiteExtraccion = limiteExtraccion;
+		this.titular = titular;
+	}
+
+	public Long getId() {
     return id;
   }
 

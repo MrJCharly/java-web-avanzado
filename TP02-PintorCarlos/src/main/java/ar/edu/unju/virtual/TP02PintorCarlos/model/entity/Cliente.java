@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -30,7 +31,7 @@ public class Cliente {
   private String email;
   private String estado;   
 
-  @OneToMany(cascade = CascadeType.ALL, mappedBy="titular")
+  @OneToMany(cascade = CascadeType.ALL, mappedBy="titular", fetch=FetchType.EAGER)
   private List<Cuenta> cuentas;
   
   public Cliente() {
