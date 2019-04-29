@@ -5,5 +5,6 @@ import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta;
 
 public interface CuentaService {
 	public Cuenta create(Cuenta cuenta);
+	public void delete(Cuenta cuenta);
 	public Cliente getTitular(Cuenta cuenta);
 }

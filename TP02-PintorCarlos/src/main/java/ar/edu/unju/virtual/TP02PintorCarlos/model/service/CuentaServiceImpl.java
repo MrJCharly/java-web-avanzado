@@ -17,10 +17,16 @@ public class CuentaServiceImpl implements CuentaService {
 	public Cuenta create(Cuenta cuenta) {
 		return cuentaRepo.save(cuenta);
 	}
+	
+	@Override
+	public void delete(Cuenta cuenta) {
+		cuentaRepo.delete(cuenta);
+	}
 
 	@Override
 	public Cliente getTitular(Cuenta cuenta) {
 		return cuenta.getTitular();
 	}
+
 
 }

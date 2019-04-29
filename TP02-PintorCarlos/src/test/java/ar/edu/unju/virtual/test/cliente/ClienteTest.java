@@ -63,9 +63,10 @@ public class ClienteTest {
 
 	@Test
 	public void test() {
+		// Crear cliente.
 		service.create(cliente);
 		
-		// Abrir cuenta.
+		// Abrir cuenta y asignar titular.
 		Cuenta cuenta1 = createCuenta (new Cuenta(
   		"11111111111111111111",
   		getTimestamp("2019-01-01"),
@@ -74,10 +75,25 @@ public class ClienteTest {
   		5000l,
   		cliente
   	));
+					
+		// Recuperar cliente con sus cuentas.
+		cliente = service.findById(cliente.getId()); 
 		
-		assertNotNull(cuenta1);		
-		
+		// Verificar que cuenta1 fue asignada al cliente.
 		assertEquals(1, cliente.getCuentas().size());
+		assertEquals(cuenta1.getId(), cliente.getCuentas().get(0).getId());
+		
+		// Restablecer BBDD.
+		deleteCliente(cliente);
+		//deleteCuenta(cuenta1);
+	}
+
+	private void deleteCuenta(Cuenta cuenta1) {
+		cuentaService.delete(cuenta1);		
+	}
+
+	private void deleteCliente(Cliente cliente) {
+		service.delete(cliente);		
 	}
 
 	private Cuenta createCuenta(Cuenta cuenta) {

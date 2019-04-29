@@ -19,6 +19,11 @@ public class ClienteServiceImpl implements ClienteService {
   }
   
   @Override
+  public void delete(Cliente cliente) {
+  	clienteRepo.delete(cliente);
+  }
+  
+  @Override
   public Cliente findById(Long id) {
   	return clienteRepo.findById(id).orElse(null);
   }
@@ -32,6 +37,7 @@ public class ClienteServiceImpl implements ClienteService {
   public Iterable<Cuenta> getCuentas(Cliente cliente) {
     return cliente.getCuentas();
   }
+
 
 
 }

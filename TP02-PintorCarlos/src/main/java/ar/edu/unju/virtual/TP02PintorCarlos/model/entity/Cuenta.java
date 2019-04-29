@@ -36,6 +36,8 @@ public class Cuenta {
   @JoinColumn(name="id_cliente", nullable = false)
   private Cliente titular;
 
+  public Cuenta() { }
+  
 	public Cuenta(String numero, Timestamp fechaIngreso, Double saldoActual, String estado, Long limiteExtraccion, Cliente titular) {
 		super();
 		this.numero = numero;
