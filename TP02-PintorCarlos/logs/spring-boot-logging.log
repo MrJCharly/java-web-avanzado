@@ -1,0 +1,36 @@
+2019-04-28 20:59:47.310  INFO 10414 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Starting Tp02PintorCarlosApplicationTests on carlos with PID 10414 (started by carlos in /home/carlos/diplomatura/java-web-avanzado/TP02-PintorCarlos)
+2019-04-28 20:59:47.334  INFO 10414 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : No active profile set, falling back to default profiles: default
+2019-04-28 20:59:49.163  INFO 10414 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-28 20:59:49.242  INFO 10414 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69ms. Found 1 repository interfaces.
+2019-04-28 20:59:49.945  INFO 10414 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2de7bd0f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-28 20:59:50.401  INFO 10414 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-28 20:59:50.633  INFO 10414 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-28 20:59:50.806  INFO 10414 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-28 20:59:50.943  INFO 10414 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-04-28 20:59:50.948  INFO 10414 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-04-28 20:59:51.147  INFO 10414 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-28 20:59:51.315  INFO 10414 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-04-28 20:59:51.549  INFO 10414 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-04-28 20:59:51.556  INFO 10414 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@869d87c
+2019-04-28 20:59:52.197  INFO 10414 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-28 20:59:53.611  INFO 10414 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-28 20:59:53.679  WARN 10414 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-28 20:59:53.840  WARN 10414 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-28 20:59:54.290  INFO 10414 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Started Tp02PintorCarlosApplicationTests in 7.737 seconds (JVM running for 9.672)
+2019-04-28 20:59:54.409  INFO 10414 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestCreate - Start
+2019-04-28 20:59:54.412  INFO 10414 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Creando cliente... Cliente [id=null, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO]
+2019-04-28 20:59:54.562  INFO 10414 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Borrando cliente... 52
+2019-04-28 20:59:54.588  INFO 10414 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestCreate - End
+2019-04-28 20:59:54.595  INFO 10414 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestDelete - Start
+2019-04-28 20:59:54.595  INFO 10414 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Creando cliente... Cliente [id=null, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO]
+2019-04-28 20:59:54.631  INFO 10414 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestDelete - End
+2019-04-28 20:59:54.636  INFO 10414 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestUpdate - Start
+2019-04-28 20:59:54.636  INFO 10414 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Creando cliente... Cliente [id=null, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO]
+2019-04-28 20:59:54.666  INFO 10414 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Borrando cliente... 54
+2019-04-28 20:59:54.679  INFO 10414 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestUpdate - End
+2019-04-28 20:59:54.701  INFO 10414 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-28 20:59:54.703  INFO 10414 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-28 20:59:54.707  INFO 10414 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-28 20:59:54.744  INFO 10414 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
