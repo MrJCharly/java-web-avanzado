@@ -1,12 +1,6 @@
 package ar.edu.unju.virtual.test.cliente;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-
-import java.sql.Timestamp;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -20,6 +14,7 @@ import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cliente;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.service.ClienteService;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.service.CuentaService;
+import ar.edu.unju.virtual.test.Util;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Tp02PintorCarlosApplication.class)
@@ -28,76 +23,36 @@ public class ClienteTest {
 	Cuenta cuenta;
 
   @Autowired
-  private ClienteService service;
+  private ClienteService clienteService;
   
   @Autowired
   private CuentaService cuentaService;
 	
   @Before
   public void before_tests() {
-  	cliente = new Cliente(
-      12345678L,
-      "john.doe",
-      "j0hn.d03",
-      "John Doe",
-      "120 Redberry Road",
-      "john.doe@hotmail.com",
-      "HABILITADO"
-    );  	
-  }
-  
-	private Timestamp getTimestamp(String dateString) {
-		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-    Date date = null;
-    Timestamp tstamp = null;
-    
-		try {
-			date = df.parse(dateString);
-			tstamp = new java.sql.Timestamp(date.getTime());
-		} catch (ParseException e) {
-			e.printStackTrace(); 
-		}
-    
-    return tstamp;
-	}
+  	cliente = Util.getCliente();
+  	cuenta = Util.getCuenta(cliente);
+  }  	
 
 	@Test
-	public void test() {
+	public void testGetCuentas() {
 		// Crear cliente.
-		service.create(cliente);
+	  clienteService.create(cliente);
 		
 		// Abrir cuenta y asignar titular.
-		Cuenta cuenta1 = createCuenta (new Cuenta(
-  		"11111111111111111111",
-  		getTimestamp("2019-01-01"),
-  		50000d,
-  		"HABILITADO",
-  		5000l,
-  		cliente
-  	));
+		cuentaService.create(cuenta);
 					
 		// Recuperar cliente con sus cuentas.
-		cliente = service.findById(cliente.getId()); 
+		cliente = clienteService.findById(cliente.getId()); 
 		
 		// Verificar que cuenta1 fue asignada al cliente.
 		assertEquals(1, cliente.getCuentas().size());
-		assertEquals(cuenta1.getId(), cliente.getCuentas().get(0).getId());
+		assertEquals(cuenta.getId(), cliente.getCuentas().get(0).getId());
 		
 		// Restablecer BBDD.
-		deleteCliente(cliente);
-		//deleteCuenta(cuenta1);
-	}
-
-	private void deleteCuenta(Cuenta cuenta1) {
-		cuentaService.delete(cuenta1);		
-	}
-
-	private void deleteCliente(Cliente cliente) {
-		service.delete(cliente);		
-	}
-
-	private Cuenta createCuenta(Cuenta cuenta) {
-		return cuentaService.create(cuenta);
-	}
+		// Al utilizar cascade=CascadeType.ALL basta con eliminar cliente para
+		// eliminar también las cuentas asociadas.
+		clienteService.delete(cliente);
+	}		
 
 }

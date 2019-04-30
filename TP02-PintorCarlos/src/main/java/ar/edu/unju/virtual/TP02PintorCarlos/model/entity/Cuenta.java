@@ -1,14 +1,18 @@
 package ar.edu.unju.virtual.TP02PintorCarlos.model.entity;
 
 import java.sql.Timestamp;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 
 @Entity(name="cuentas_bancarias")
@@ -36,6 +40,12 @@ public class Cuenta {
   @JoinColumn(name="id_cliente", nullable = false)
   private Cliente titular;
 
+  // Solamente para aplicar concepto de @OneToMany. En una app real, esta relación
+  // podría comprometer el rendimiento del sistema, ya que una cuenta en general tendrá
+  // un número elevado de movimientos.
+  @OneToMany(cascade=CascadeType.ALL, mappedBy="cuenta", fetch=FetchType.EAGER)
+  private List<Movimiento> movimientos;
+  
   public Cuenta() { }
   
 	public Cuenta(String numero, Timestamp fechaIngreso, Double saldoActual, String estado, Long limiteExtraccion, Cliente titular) {

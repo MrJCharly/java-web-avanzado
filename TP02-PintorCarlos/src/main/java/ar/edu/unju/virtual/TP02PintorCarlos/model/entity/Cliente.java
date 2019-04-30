@@ -31,7 +31,7 @@ public class Cliente {
   private String email;
   private String estado;   
 
-  @OneToMany(cascade = CascadeType.ALL, mappedBy="titular", fetch=FetchType.EAGER)
+  @OneToMany(cascade=CascadeType.ALL, mappedBy="titular", fetch=FetchType.EAGER)
   private List<Cuenta> cuentas;
   
   public Cliente() {
