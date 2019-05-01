@@ -2,6 +2,7 @@ package ar.edu.unju.virtual.test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
@@ -51,25 +52,38 @@ public class MovimientoTest {
     cliente = Util.getCliente(rol);    
     cuenta = Util.getCuenta(cliente);
     mov = Util.getMovimiento(cuenta, cliente);
+    
+    // Crear rol.
+    rolService.create(rol);
+    LOG.info("Rol creado " + rol);
+    
+    // Crear cliente.
+    clienteService.create(cliente);
+    LOG.info("Cliente creado " + cliente);
+    
+    // Abrir cuenta.    
+    cuentaService.create(cuenta);
+    LOG.info("Cuenta creada " + cuenta);
+    
+    // Crear movimiento.
+    movService.create(mov);
+    LOG.info("Movimiento creado " + mov);
+  }
+  
+  private void restaurar_DB() {
+    movService.deleteById(mov.getId());
+    cuentaService.deleteById(cuenta.getId());
+    clienteService.deleteById(cliente.getId());
+    rolService.deleteById(rol.getId());    
   }
   
   @Test
   public void testCreateAndRetrieve() {
-    // Crear rol.
-    rolService.create(rol);
     
-    // Crear cliente.
-    clienteService.create(cliente);
-    
-    // Abrir cuenta.    
-    cuentaService.create(cuenta);
-    
-    // Crear movimiento.
-    movService.create(mov);    
-    
+    // Recuperar movimiento creado en before_tests().
     mov = movService.findById(mov.getId());
     
-    LOG.info("Movimiento: " + mov);
+    LOG.info("Movimiento recuperado: " + mov);
     
     cliente = clienteService.findById(cliente.getId());
     
@@ -79,40 +93,42 @@ public class MovimientoTest {
     assertEquals(cliente.getId(), mov.getTitular().getId());
     assertEquals(cuenta.getId(), mov.getCuenta().getId());
     
-    // Restaurar DB.
-    // Al utilizar cascade=CascadeType.ALL basta con eliminar cliente para
-    // eliminar las cuentas asociadas y todos sus movimientos.
-    clienteService.delete(cliente);
-    rolService.delete(rol);
+    restaurar_DB();
   }
   
   @Test
   public void testUpdate() {
-    // Crear rol.
-    rolService.create(rol);
     
-    // Crear cliente.
-    clienteService.create(cliente);
-    
-    // Abrir cuenta.    
-    cuentaService.create(cuenta);
-    
-    // Crear movimiento.
-    movService.create(mov);
-    
+    // Modificar credito y debito.
     mov.setCredito(1245d);
     mov.setDebito(5421d);
     
     movService.update(mov);
     
+    // Recuperar movimiento de BD.
     mov = movService.findById(mov.getId());
     cliente = clienteService.findById(cliente.getId());
     
+    // Verificar cambios.
     assertNotNull(mov);
     assertTrue(mov.getCredito() == 1245d);
     assertTrue(mov.getDebito() == 5421d);
     
-    clienteService.delete(cliente);
-    rolService.delete(rol);
+    restaurar_DB();
+  }
+  
+  @Test
+  public void testDelete() {
+    
+    // Recuperar movimiento de BD.
+    mov = movService.findById(mov.getId());
+    
+    assertNotNull(mov);    
+    
+    // Eliminar mov, y el resto de entidades creadas. 
+    restaurar_DB();
+    
+    // Verificar que el movimiento no existe en BD.
+    assertNull(movService.findById(mov.getId()));
   }
 }

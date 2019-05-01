@@ -30,8 +30,8 @@ public class MovimientoServiceImpl implements MovimientoService {
   }
   
   @Override
-  public void delete(Movimiento mov) {
-    repo.delete(mov);
+  public void deleteById(Long id) {
+    repo.deleteById(id);
   }
 
   @Override

@@ -27,8 +27,8 @@ public class RolServiceImpl implements RolService {
   }
   
   @Override
-  public void delete(Rol rol) {
-    repo.delete(rol);
+  public void deleteById(Long id) {
+    repo.deleteById(id);
   }
 
 }

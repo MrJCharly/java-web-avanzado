@@ -2,7 +2,6 @@ package ar.edu.unju.virtual.TP02PintorCarlos.model.entity;
 
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -33,7 +32,7 @@ public class Cliente {
   private String email;
   private String estado;   
 
-  @OneToMany(cascade=CascadeType.ALL, mappedBy="titular", fetch=FetchType.EAGER)
+  @OneToMany(mappedBy="titular", fetch=FetchType.EAGER)
   private List<Cuenta> cuentas;
   
   @ManyToOne

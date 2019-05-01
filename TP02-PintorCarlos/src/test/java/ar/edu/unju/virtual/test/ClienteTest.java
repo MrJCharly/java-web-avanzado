@@ -33,47 +33,48 @@ public class ClienteTest {
   public void before_tests() {    
   	cliente = Util.getCliente(null);
   	cuenta = Util.getCuenta(cliente);
-  }  	
+  	
+  	// Crear cliente.
+    clienteService.create(cliente);
+    
+    // Abrir cuenta y asignarle titular.
+    cuentaService.create(cuenta);
+  }
+  
+  public void restaurar_BD() {
+    cuentaService.deleteById(cuenta.getId());
+    clienteService.deleteById(cliente.getId());
+  }
 
   @Test
   public void testCreateAndRetrieve() {    
-    // Crear cliente.
-    clienteService.create(cliente);
     
     // Recuperar cliente.
     cliente = clienteService.findById(cliente.getId());
     
+    // Verificar que existe en BD.
     assertNotNull(cliente);
     
-    clienteService.delete(cliente);
+    restaurar_BD();
   }
   
 	@Test
 	public void testGetCuentas() {
-		// Crear cliente.
-	  clienteService.create(cliente);
-		
-		// Abrir cuenta y asignar titular.
-		cuentaService.create(cuenta);
 					
 		// Recuperar cliente con sus cuentas.
 		cliente = clienteService.findById(cliente.getId()); 
 		
-		// Verificar que cuenta1 fue asignada al cliente.
+		// Verificar que la cuenta fue asignada al cliente.
 		assertEquals(1, cliente.getCuentas().size());
 		assertEquals(cuenta.getId(), cliente.getCuentas().get(0).getId());
 		
-		// Restablecer BBDD.
-		// Al utilizar cascade=CascadeType.ALL basta con eliminar cliente para
-		// eliminar también las cuentas asociadas.
-		clienteService.delete(cliente);		
+		restaurar_BD();		
 	}		
 
 	@Test
 	public void testUpdate() {
-	  // Crear cliente.
-    clienteService.create(cliente);
-    
+
+	  // Modificar cliente.
     cliente.setNombre("Juan Pérez");
     
     clienteService.update(cliente);
@@ -81,24 +82,25 @@ public class ClienteTest {
     // Recuperar cliente.
     cliente = clienteService.findById(cliente.getId());
     
+    // Verificar cambios en BD.
     assertNotNull(cliente);
     assertEquals("Juan Pérez", cliente.getNombre());
     
-    clienteService.delete(cliente);
+    restaurar_BD();
 	}
 	
 	@Test
 	public void testDelete() {
-	  // Crear cliente.
-    clienteService.create(cliente);
-    
+	      
     // Recuperar cliente.
     cliente = clienteService.findById(cliente.getId());
     
+    // Verificar que existe en BD.
     assertNotNull(cliente);
     
-    clienteService.delete(cliente);
+    restaurar_BD();
     
+    // Verificar que fue eliminado de BD.
     assertNull(clienteService.findById(cliente.getId()));
 	}
 }

@@ -32,7 +32,7 @@ public class RolTest {
     
     assertNotNull(rol);
     
-    rolService.delete(rol);
+    rolService.deleteById(rol.getId());
   }
   
   @Test
@@ -49,7 +49,7 @@ public class RolTest {
     
     assertEquals("CLIENTE", rol.getDescripcion());
     
-    rolService.delete(rol);
+    rolService.deleteById(rol.getId());
   }
   
   @Test
@@ -58,7 +58,7 @@ public class RolTest {
     
     rolService.create(rol);
     
-    rolService.delete(rol);
+    rolService.deleteById(rol.getId());
     
     rol = rolService.findById(rol.getId());
     

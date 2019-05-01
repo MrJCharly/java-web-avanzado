@@ -144,3 +144,493 @@
 2019-05-01 00:26:47.221  INFO 18460 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2019-05-01 00:26:47.224  INFO 18460 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2019-05-01 00:26:47.257  INFO 18460 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-05-01 11:48:32.137  INFO 5672 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Starting Tp02PintorCarlosApplicationTests on carlos with PID 5672 (started by carlos in /home/carlos/diplomatura/java-web-avanzado/TP02-PintorCarlos)
+2019-05-01 11:48:32.149  INFO 5672 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : No active profile set, falling back to default profiles: default
+2019-05-01 11:48:33.735  INFO 5672 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-01 11:48:33.855  INFO 5672 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111ms. Found 4 repository interfaces.
+2019-05-01 11:48:34.443  INFO 5672 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$40c330c3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-01 11:48:34.817  INFO 5672 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-01 11:48:35.200  INFO 5672 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-01 11:48:35.299  INFO 5672 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-01 11:48:35.438  INFO 5672 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-05-01 11:48:35.442  INFO 5672 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-05-01 11:48:35.687  INFO 5672 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-01 11:48:35.848  INFO 5672 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-05-01 11:48:36.266  INFO 5672 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-05-01 11:48:36.274  INFO 5672 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@7bac686b
+2019-05-01 11:48:37.258  INFO 5672 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 11:48:38.610  INFO 5672 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-01 11:48:38.712  WARN 5672 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-01 11:48:38.908  WARN 5672 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-01 11:48:39.452  INFO 5672 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Started Tp02PintorCarlosApplicationTests in 7.839 seconds (JVM running for 9.51)
+2019-05-01 11:48:39.639  INFO 5672 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestCreate - Start
+2019-05-01 11:48:39.640  INFO 5672 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Creando cliente... Cliente [id=null, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=null]
+2019-05-01 11:48:40.048  INFO 5672 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Borrando cliente... 173
+2019-05-01 11:48:40.090  INFO 5672 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestCreate - End
+2019-05-01 11:48:40.098  INFO 5672 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestDelete - Start
+2019-05-01 11:48:40.098  INFO 5672 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Creando cliente... Cliente [id=null, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=null]
+2019-05-01 11:48:40.136  INFO 5672 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestDelete - End
+2019-05-01 11:48:40.140  INFO 5672 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestUpdate - Start
+2019-05-01 11:48:40.141  INFO 5672 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Creando cliente... Cliente [id=null, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=null]
+2019-05-01 11:48:40.179  INFO 5672 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Borrando cliente... 175
+2019-05-01 11:48:40.190  INFO 5672 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestUpdate - End
+2019-05-01 11:48:40.226  INFO 5672 --- [main] ar.edu.unju.virtual.test.ClienteTest     : Starting ClienteTest on carlos with PID 5672 (started by carlos in /home/carlos/diplomatura/java-web-avanzado/TP02-PintorCarlos)
+2019-05-01 11:48:40.227  INFO 5672 --- [main] ar.edu.unju.virtual.test.ClienteTest     : No active profile set, falling back to default profiles: default
+2019-05-01 11:48:40.481  INFO 5672 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-01 11:48:40.497  INFO 5672 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 4 repository interfaces.
+2019-05-01 11:48:40.592  INFO 5672 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$40c330c3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-01 11:48:40.703  INFO 5672 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-05-01 11:48:40.723  INFO 5672 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-05-01 11:48:40.742  INFO 5672 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-01 11:48:40.748  INFO 5672 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-05-01 11:48:40.900  INFO 5672 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-05-01 11:48:40.901  INFO 5672 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@7bac686b
+2019-05-01 11:48:41.091  INFO 5672 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 11:48:41.585  INFO 5672 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-01 11:48:41.602  WARN 5672 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-01 11:48:41.694  WARN 5672 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-01 11:48:41.952  INFO 5672 --- [main] ar.edu.unju.virtual.test.ClienteTest     : Started ClienteTest in 1.758 seconds (JVM running for 12.011)
+2019-05-01 11:48:42.214  INFO 5672 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento: Movimiento [id=50, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@35841d6, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=180, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=[ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@35841d6], rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@1e50eb3f]]
+2019-05-01 11:48:42.220  INFO 5672 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente: Cliente [id=180, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=[ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@2d7aa291], rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@762cdf46]
+2019-05-01 11:48:42.470  INFO 5672 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-01 11:48:42.476  INFO 5672 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 11:48:42.483  INFO 5672 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-05-01 11:48:42.483  INFO 5672 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-01 11:48:42.486  INFO 5672 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 11:48:42.491  INFO 5672 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-05-01 11:48:42.506  INFO 5672 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-05-01 11:48:42.533  INFO 5672 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2019-05-01 12:06:28.941  INFO 6537 --- [main] ar.edu.unju.virtual.test.MovimientoTest  : Starting MovimientoTest on carlos with PID 6537 (started by carlos in /home/carlos/diplomatura/java-web-avanzado/TP02-PintorCarlos)
+2019-05-01 12:06:28.943  INFO 6537 --- [main] ar.edu.unju.virtual.test.MovimientoTest  : No active profile set, falling back to default profiles: default
+2019-05-01 12:06:29.976  INFO 6537 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-01 12:06:30.097  INFO 6537 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114ms. Found 4 repository interfaces.
+2019-05-01 12:06:30.855  INFO 6537 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$65008d66] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-01 12:06:31.172  INFO 6537 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-01 12:06:31.486  INFO 6537 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-01 12:06:31.587  INFO 6537 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-01 12:06:31.687  INFO 6537 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-05-01 12:06:31.689  INFO 6537 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-05-01 12:06:31.876  INFO 6537 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-01 12:06:32.013  INFO 6537 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-05-01 12:06:32.218  INFO 6537 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-05-01 12:06:32.224  INFO 6537 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@46383a78
+2019-05-01 12:06:33.124  INFO 6537 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 12:06:34.788  INFO 6537 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-01 12:06:34.922  WARN 6537 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-01 12:06:35.104  WARN 6537 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-01 12:06:35.517  INFO 6537 --- [main] ar.edu.unju.virtual.test.MovimientoTest  : Started MovimientoTest in 7.017 seconds (JVM running for 8.027)
+2019-05-01 12:06:35.930  INFO 6537 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Rol creado ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@498a4d62
+2019-05-01 12:06:35.946  INFO 6537 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente creado Cliente [id=182, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@498a4d62]
+2019-05-01 12:06:35.963  INFO 6537 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cuenta creada ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@72a3462f
+2019-05-01 12:06:35.972  INFO 6537 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento creado Movimiento [id=52, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@72a3462f, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=182, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@498a4d62]]
+2019-05-01 12:06:36.019  INFO 6537 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento recuperado: Movimiento [id=52, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@1a5b7394, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=182, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=[ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@1a5b7394], rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@28b5662d]]
+2019-05-01 12:06:36.035  INFO 6537 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente: Cliente [id=182, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=[ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@175ac243], rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@fd4459b]
+2019-05-01 12:06:36.105  INFO 6537 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Rol creado ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@6df2a206
+2019-05-01 12:06:36.113  INFO 6537 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente creado Cliente [id=183, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@6df2a206]
+2019-05-01 12:06:36.121  INFO 6537 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cuenta creada ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@c82d925
+2019-05-01 12:06:36.130  INFO 6537 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento creado Movimiento [id=53, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@c82d925, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=183, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@6df2a206]]
+2019-05-01 12:06:36.161  WARN 6537 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23503
+2019-05-01 12:06:36.161 ERROR 6537 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: update or delete on table "clientes" violates foreign key constraint "clientes_cuentas_bancarias_fkey" on table "cuentas_bancarias"
+  Detail: Key (id)=(183) is still referenced from table "cuentas_bancarias".
+2019-05-01 12:06:36.163  INFO 6537 --- [main] o.h.e.j.b.internal.AbstractBatchImpl     : HHH000010: On release of batch it still contained JDBC statements
+2019-05-01 12:06:36.164 ERROR 6537 --- [main] o.h.i.ExceptionMapperStandardImpl        : HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2019-05-01 12:06:36.196  INFO 6537 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Rol creado ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@21a9f95b
+2019-05-01 12:06:36.199  WARN 6537 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+2019-05-01 12:06:36.199 ERROR 6537 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: duplicate key value violates unique constraint "dni_uk"
+  Detail: Key (dni)=(12345678) already exists.
+2019-05-01 12:06:36.199 ERROR 6537 --- [main] o.h.i.ExceptionMapperStandardImpl        : HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2019-05-01 12:06:36.219  INFO 6537 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-01 12:06:36.226  INFO 6537 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 12:06:36.229  INFO 6537 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-05-01 12:06:36.281  INFO 6537 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-05-01 12:18:11.846  INFO 7427 --- [main] ar.edu.unju.virtual.test.MovimientoTest  : Starting MovimientoTest on carlos with PID 7427 (started by carlos in /home/carlos/diplomatura/java-web-avanzado/TP02-PintorCarlos)
+2019-05-01 12:18:11.850  INFO 7427 --- [main] ar.edu.unju.virtual.test.MovimientoTest  : No active profile set, falling back to default profiles: default
+2019-05-01 12:18:14.028  INFO 7427 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-01 12:18:14.232  INFO 7427 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 190ms. Found 4 repository interfaces.
+2019-05-01 12:18:15.065  INFO 7427 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$babfe61d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-01 12:18:15.378  INFO 7427 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-01 12:18:15.672  INFO 7427 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-01 12:18:15.760  INFO 7427 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-01 12:18:15.847  INFO 7427 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-05-01 12:18:15.849  INFO 7427 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-05-01 12:18:16.028  INFO 7427 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-01 12:18:16.199  INFO 7427 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-05-01 12:18:16.395  INFO 7427 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-05-01 12:18:16.403  INFO 7427 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@3a2d3909
+2019-05-01 12:18:17.498  INFO 7427 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 12:18:19.059  INFO 7427 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-01 12:18:19.185  WARN 7427 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-01 12:18:19.349  WARN 7427 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-01 12:18:19.725  INFO 7427 --- [main] ar.edu.unju.virtual.test.MovimientoTest  : Started MovimientoTest in 8.319 seconds (JVM running for 9.262)
+2019-05-01 12:18:20.091  INFO 7427 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Rol creado ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@6ec3d8e4
+2019-05-01 12:18:20.107  INFO 7427 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente creado Cliente [id=185, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@6ec3d8e4]
+2019-05-01 12:18:20.124  INFO 7427 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cuenta creada ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@5c1c9881
+2019-05-01 12:18:20.141  INFO 7427 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento creado Movimiento [id=54, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@5c1c9881, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=185, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@6ec3d8e4]]
+2019-05-01 12:18:20.189  INFO 7427 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento recuperado: Movimiento [id=54, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@4df0d9f8, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=185, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=[ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@4df0d9f8], rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@6de84336]]
+2019-05-01 12:18:20.201  INFO 7427 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente: Cliente [id=185, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=[ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@87aec6a], rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@43a59289]
+2019-05-01 12:18:20.240  INFO 7427 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Rol creado ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@671da0f9
+2019-05-01 12:18:20.247  WARN 7427 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+2019-05-01 12:18:20.247 ERROR 7427 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: duplicate key value violates unique constraint "dni_uk"
+  Detail: Key (dni)=(12345678) already exists.
+2019-05-01 12:18:20.249 ERROR 7427 --- [main] o.h.i.ExceptionMapperStandardImpl        : HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2019-05-01 12:18:20.266  INFO 7427 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Rol creado ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@76db9048
+2019-05-01 12:18:20.271  WARN 7427 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+2019-05-01 12:18:20.271 ERROR 7427 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: duplicate key value violates unique constraint "dni_uk"
+  Detail: Key (dni)=(12345678) already exists.
+2019-05-01 12:18:20.271 ERROR 7427 --- [main] o.h.i.ExceptionMapperStandardImpl        : HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2019-05-01 12:18:20.295  INFO 7427 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-01 12:18:20.298  INFO 7427 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 12:18:20.303  INFO 7427 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-05-01 12:18:20.339  INFO 7427 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-05-01 12:20:36.319  INFO 7539 --- [main] ar.edu.unju.virtual.test.MovimientoTest  : Starting MovimientoTest on carlos with PID 7539 (started by carlos in /home/carlos/diplomatura/java-web-avanzado/TP02-PintorCarlos)
+2019-05-01 12:20:36.321  INFO 7539 --- [main] ar.edu.unju.virtual.test.MovimientoTest  : No active profile set, falling back to default profiles: default
+2019-05-01 12:20:37.348  INFO 7539 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-01 12:20:37.462  INFO 7539 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103ms. Found 4 repository interfaces.
+2019-05-01 12:20:38.068  INFO 7539 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$babfe61d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-01 12:20:38.341  INFO 7539 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-01 12:20:38.701  INFO 7539 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-01 12:20:38.788  INFO 7539 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-01 12:20:38.890  INFO 7539 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-05-01 12:20:38.894  INFO 7539 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-05-01 12:20:39.112  INFO 7539 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-01 12:20:39.246  INFO 7539 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-05-01 12:20:39.475  INFO 7539 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-05-01 12:20:39.480  INFO 7539 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@7e7fe6d
+2019-05-01 12:20:40.306  INFO 7539 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 12:20:41.642  INFO 7539 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-01 12:20:41.736  WARN 7539 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-01 12:20:41.917  WARN 7539 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-01 12:20:42.356  INFO 7539 --- [main] ar.edu.unju.virtual.test.MovimientoTest  : Started MovimientoTest in 6.478 seconds (JVM running for 7.25)
+2019-05-01 12:20:42.695  INFO 7539 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Rol creado ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@5a466dd
+2019-05-01 12:20:42.728  INFO 7539 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente creado Cliente [id=188, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@5a466dd]
+2019-05-01 12:20:42.753  INFO 7539 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cuenta creada ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@6076c66
+2019-05-01 12:20:42.778  INFO 7539 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento creado Movimiento [id=55, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@6076c66, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=188, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@5a466dd]]
+2019-05-01 12:20:42.850  INFO 7539 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento recuperado: Movimiento [id=55, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@627bcd7e, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=188, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=[ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@627bcd7e], rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@26f75d9c]]
+2019-05-01 12:20:42.860  INFO 7539 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente: Cliente [id=188, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=[ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@126a9a3d], rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@5529522f]
+2019-05-01 12:20:42.945  INFO 7539 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Rol creado ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@16e07bae
+2019-05-01 12:20:42.953  INFO 7539 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente creado Cliente [id=189, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@16e07bae]
+2019-05-01 12:20:42.961  INFO 7539 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cuenta creada ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@1fa9692b
+2019-05-01 12:20:42.970  INFO 7539 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento creado Movimiento [id=56, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@1fa9692b, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=189, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@16e07bae]]
+2019-05-01 12:20:43.061  INFO 7539 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Rol creado ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@273293c8
+2019-05-01 12:20:43.070  INFO 7539 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente creado Cliente [id=190, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@273293c8]
+2019-05-01 12:20:43.088  INFO 7539 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cuenta creada ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@19647566
+2019-05-01 12:20:43.103  INFO 7539 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento creado Movimiento [id=57, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@19647566, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=190, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@273293c8]]
+2019-05-01 12:20:43.198  INFO 7539 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-01 12:20:43.211  INFO 7539 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 12:20:43.217  INFO 7539 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-05-01 12:20:43.233  INFO 7539 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-05-01 12:20:53.570  INFO 7583 --- [main] ar.edu.unju.virtual.test.MovimientoTest  : Starting MovimientoTest on carlos with PID 7583 (started by carlos in /home/carlos/diplomatura/java-web-avanzado/TP02-PintorCarlos)
+2019-05-01 12:20:53.572  INFO 7583 --- [main] ar.edu.unju.virtual.test.MovimientoTest  : No active profile set, falling back to default profiles: default
+2019-05-01 12:20:54.605  INFO 7583 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-01 12:20:54.748  INFO 7583 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 130ms. Found 4 repository interfaces.
+2019-05-01 12:20:55.785  INFO 7583 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5900a573] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-01 12:20:56.099  INFO 7583 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-01 12:20:56.409  INFO 7583 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-01 12:20:56.498  INFO 7583 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-01 12:20:56.597  INFO 7583 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-05-01 12:20:56.599  INFO 7583 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-05-01 12:20:56.787  INFO 7583 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-01 12:20:56.929  INFO 7583 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-05-01 12:20:57.130  INFO 7583 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-05-01 12:20:57.136  INFO 7583 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@279dd959
+2019-05-01 12:20:57.906  INFO 7583 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 12:20:59.228  INFO 7583 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-01 12:20:59.315  WARN 7583 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-01 12:20:59.511  WARN 7583 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-01 12:20:59.993  INFO 7583 --- [main] ar.edu.unju.virtual.test.MovimientoTest  : Started MovimientoTest in 6.83 seconds (JVM running for 7.669)
+2019-05-01 12:21:00.311  INFO 7583 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Rol creado ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@1760e594
+2019-05-01 12:21:00.328  INFO 7583 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente creado Cliente [id=191, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@1760e594]
+2019-05-01 12:21:00.345  INFO 7583 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cuenta creada ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@22aefae0
+2019-05-01 12:21:00.353  INFO 7583 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento creado Movimiento [id=58, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@22aefae0, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=191, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@1760e594]]
+2019-05-01 12:21:00.395  INFO 7583 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento recuperado: Movimiento [id=58, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@34b2d51a, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=191, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=[ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@34b2d51a], rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@2d4e99de]]
+2019-05-01 12:21:00.403  INFO 7583 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente: Cliente [id=191, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=[ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@38fb151a], rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@1b60d324]
+2019-05-01 12:21:00.478  INFO 7583 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Rol creado ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@11cadb32
+2019-05-01 12:21:00.486  INFO 7583 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente creado Cliente [id=192, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@11cadb32]
+2019-05-01 12:21:00.503  INFO 7583 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cuenta creada ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@12670e55
+2019-05-01 12:21:00.511  INFO 7583 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento creado Movimiento [id=59, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@12670e55, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=192, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@11cadb32]]
+2019-05-01 12:21:00.586  INFO 7583 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Rol creado ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@69069866
+2019-05-01 12:21:00.595  INFO 7583 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente creado Cliente [id=193, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@69069866]
+2019-05-01 12:21:00.603  INFO 7583 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cuenta creada ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@39a8e2fa
+2019-05-01 12:21:00.611  INFO 7583 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento creado Movimiento [id=60, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@39a8e2fa, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=193, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@69069866]]
+2019-05-01 12:21:00.712  INFO 7583 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-01 12:21:00.715  INFO 7583 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 12:21:00.719  INFO 7583 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-05-01 12:21:00.753  INFO 7583 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-05-01 12:26:34.444  INFO 7873 --- [main] ar.edu.unju.virtual.test.ClienteTest     : Starting ClienteTest on carlos with PID 7873 (started by carlos in /home/carlos/diplomatura/java-web-avanzado/TP02-PintorCarlos)
+2019-05-01 12:26:34.446  INFO 7873 --- [main] ar.edu.unju.virtual.test.ClienteTest     : No active profile set, falling back to default profiles: default
+2019-05-01 12:26:35.439  INFO 7873 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-01 12:26:35.547  INFO 7873 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98ms. Found 4 repository interfaces.
+2019-05-01 12:26:36.226  INFO 7873 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3b401220] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-01 12:26:36.559  INFO 7873 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-01 12:26:36.809  INFO 7873 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-01 12:26:36.999  INFO 7873 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-01 12:26:37.115  INFO 7873 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-05-01 12:26:37.117  INFO 7873 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-05-01 12:26:37.256  INFO 7873 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-01 12:26:37.393  INFO 7873 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-05-01 12:26:37.605  INFO 7873 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-05-01 12:26:37.612  INFO 7873 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@310aee0b
+2019-05-01 12:26:38.703  INFO 7873 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 12:26:40.237  INFO 7873 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-01 12:26:40.351  WARN 7873 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-01 12:26:40.541  WARN 7873 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-01 12:26:41.175  INFO 7873 --- [main] ar.edu.unju.virtual.test.ClienteTest     : Started ClienteTest in 7.145 seconds (JVM running for 7.877)
+2019-05-01 12:26:41.941  INFO 7873 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-01 12:26:41.959  INFO 7873 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 12:26:41.963  INFO 7873 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-05-01 12:26:41.989  INFO 7873 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-05-01 12:26:46.332  INFO 8004 --- [main] ar.edu.unju.virtual.test.ClienteTest     : Starting ClienteTest on carlos with PID 8004 (started by carlos in /home/carlos/diplomatura/java-web-avanzado/TP02-PintorCarlos)
+2019-05-01 12:26:46.333  INFO 8004 --- [main] ar.edu.unju.virtual.test.ClienteTest     : No active profile set, falling back to default profiles: default
+2019-05-01 12:26:47.428  INFO 8004 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-01 12:26:47.528  INFO 8004 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89ms. Found 4 repository interfaces.
+2019-05-01 12:26:48.236  INFO 8004 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1e0802f7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-01 12:26:48.573  INFO 8004 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-01 12:26:48.924  INFO 8004 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-01 12:26:49.037  INFO 8004 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-01 12:26:49.150  INFO 8004 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-05-01 12:26:49.156  INFO 8004 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-05-01 12:26:49.347  INFO 8004 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-01 12:26:49.490  INFO 8004 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-05-01 12:26:49.722  INFO 8004 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-05-01 12:26:49.730  INFO 8004 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@1c9fbb61
+2019-05-01 12:26:50.554  INFO 8004 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 12:26:51.790  INFO 8004 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-01 12:26:51.878  WARN 8004 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-01 12:26:52.051  WARN 8004 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-01 12:26:52.441  INFO 8004 --- [main] ar.edu.unju.virtual.test.ClienteTest     : Started ClienteTest in 6.67 seconds (JVM running for 7.778)
+2019-05-01 12:26:53.056  INFO 8004 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-01 12:26:53.060  INFO 8004 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 12:26:53.063  INFO 8004 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-05-01 12:26:53.103  INFO 8004 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-05-01 12:27:05.301  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Starting Tp02PintorCarlosApplicationTests on carlos with PID 8077 (started by carlos in /home/carlos/diplomatura/java-web-avanzado/TP02-PintorCarlos)
+2019-05-01 12:27:05.303  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : No active profile set, falling back to default profiles: default
+2019-05-01 12:27:06.361  INFO 8077 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-01 12:27:06.493  INFO 8077 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117ms. Found 4 repository interfaces.
+2019-05-01 12:27:07.234  INFO 8077 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$52edfd1a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-01 12:27:07.541  INFO 8077 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-01 12:27:07.824  INFO 8077 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-01 12:27:07.904  INFO 8077 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-01 12:27:07.990  INFO 8077 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-05-01 12:27:07.993  INFO 8077 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-05-01 12:27:08.173  INFO 8077 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-01 12:27:08.318  INFO 8077 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-05-01 12:27:08.549  INFO 8077 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-05-01 12:27:08.554  INFO 8077 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@107bfcb2
+2019-05-01 12:27:09.400  INFO 8077 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 12:27:10.627  INFO 8077 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-01 12:27:10.699  WARN 8077 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-01 12:27:10.866  WARN 8077 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-01 12:27:11.239  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Started Tp02PintorCarlosApplicationTests in 6.388 seconds (JVM running for 7.316)
+2019-05-01 12:27:11.326  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestCreate - Start
+2019-05-01 12:27:11.327  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Creando cliente... Cliente [id=null, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=null]
+2019-05-01 12:27:11.580  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Borrando cliente... 202
+2019-05-01 12:27:11.603  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestCreate - End
+2019-05-01 12:27:11.609  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestDelete - Start
+2019-05-01 12:27:11.609  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Creando cliente... Cliente [id=null, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=null]
+2019-05-01 12:27:11.641  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestDelete - End
+2019-05-01 12:27:11.645  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestUpdate - Start
+2019-05-01 12:27:11.646  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Creando cliente... Cliente [id=null, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=null]
+2019-05-01 12:27:11.675  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Borrando cliente... 204
+2019-05-01 12:27:11.687  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestUpdate - End
+2019-05-01 12:27:11.716  INFO 8077 --- [main] ar.edu.unju.virtual.test.ClienteTest     : Starting ClienteTest on carlos with PID 8077 (started by carlos in /home/carlos/diplomatura/java-web-avanzado/TP02-PintorCarlos)
+2019-05-01 12:27:11.717  INFO 8077 --- [main] ar.edu.unju.virtual.test.ClienteTest     : No active profile set, falling back to default profiles: default
+2019-05-01 12:27:11.953  INFO 8077 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-01 12:27:11.971  INFO 8077 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18ms. Found 4 repository interfaces.
+2019-05-01 12:27:12.079  INFO 8077 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$52edfd1a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-01 12:27:12.197  INFO 8077 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-05-01 12:27:12.217  INFO 8077 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-05-01 12:27:12.243  INFO 8077 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-01 12:27:12.250  INFO 8077 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-05-01 12:27:12.397  INFO 8077 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-05-01 12:27:12.398  INFO 8077 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@107bfcb2
+2019-05-01 12:27:12.581  INFO 8077 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 12:27:13.037  INFO 8077 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-01 12:27:13.050  WARN 8077 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-01 12:27:13.124  WARN 8077 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-01 12:27:13.335  INFO 8077 --- [main] ar.edu.unju.virtual.test.ClienteTest     : Started ClienteTest in 1.643 seconds (JVM running for 9.411)
+2019-05-01 12:27:13.603  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Rol creado ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@27ec74a3
+2019-05-01 12:27:13.611  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente creado Cliente [id=209, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@27ec74a3]
+2019-05-01 12:27:13.619  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cuenta creada ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@15ad5acb
+2019-05-01 12:27:13.636  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento creado Movimiento [id=61, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@15ad5acb, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=209, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@27ec74a3]]
+2019-05-01 12:27:13.646  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento recuperado: Movimiento [id=61, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@1d5bb5c, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=209, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=[ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@1d5bb5c], rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@48da64f2]]
+2019-05-01 12:27:13.650  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente: Cliente [id=209, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=[ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@6585df70], rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@51fb5fe6]
+2019-05-01 12:27:13.703  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Rol creado ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@4888425d
+2019-05-01 12:27:13.719  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente creado Cliente [id=210, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@4888425d]
+2019-05-01 12:27:13.728  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cuenta creada ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@2a510e0e
+2019-05-01 12:27:13.736  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento creado Movimiento [id=62, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@2a510e0e, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=210, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@4888425d]]
+2019-05-01 12:27:13.794  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Rol creado ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@57920d6c
+2019-05-01 12:27:13.803  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente creado Cliente [id=211, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@57920d6c]
+2019-05-01 12:27:13.812  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cuenta creada ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@6badb08c
+2019-05-01 12:27:13.819  INFO 8077 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento creado Movimiento [id=63, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@6badb08c, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=211, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@57920d6c]]
+2019-05-01 12:27:14.013  INFO 8077 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-01 12:27:14.017  INFO 8077 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 12:27:14.022  INFO 8077 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-05-01 12:27:14.030  INFO 8077 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-01 12:27:14.032  INFO 8077 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 12:27:14.044  INFO 8077 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-05-01 12:27:14.045  INFO 8077 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-05-01 12:27:14.078  INFO 8077 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2019-05-01 12:32:36.267  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Starting Tp02PintorCarlosApplicationTests on carlos with PID 8435 (started by carlos in /home/carlos/diplomatura/java-web-avanzado/TP02-PintorCarlos)
+2019-05-01 12:32:36.270  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : No active profile set, falling back to default profiles: default
+2019-05-01 12:32:37.620  INFO 8435 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-01 12:32:37.719  INFO 8435 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88ms. Found 4 repository interfaces.
+2019-05-01 12:32:38.359  INFO 8435 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7bee554d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-01 12:32:38.656  INFO 8435 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-01 12:32:38.950  INFO 8435 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-01 12:32:39.034  INFO 8435 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-01 12:32:39.119  INFO 8435 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-05-01 12:32:39.121  INFO 8435 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-05-01 12:32:39.292  INFO 8435 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-01 12:32:39.419  INFO 8435 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-05-01 12:32:39.626  INFO 8435 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-05-01 12:32:39.634  INFO 8435 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@2121d1f9
+2019-05-01 12:32:40.409  INFO 8435 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 12:32:41.754  INFO 8435 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-01 12:32:41.846  WARN 8435 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-01 12:32:42.047  WARN 8435 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-01 12:32:42.445  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Started Tp02PintorCarlosApplicationTests in 6.569 seconds (JVM running for 7.544)
+2019-05-01 12:32:42.531  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestCreate - Start
+2019-05-01 12:32:42.531  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Creando cliente... Cliente [id=null, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=null]
+2019-05-01 12:32:42.862  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Borrando cliente... 212
+2019-05-01 12:32:42.886  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestCreate - End
+2019-05-01 12:32:42.892  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestDelete - Start
+2019-05-01 12:32:42.892  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Creando cliente... Cliente [id=null, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=null]
+2019-05-01 12:32:43.015  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestDelete - End
+2019-05-01 12:32:43.019  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestUpdate - Start
+2019-05-01 12:32:43.020  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Creando cliente... Cliente [id=null, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=null]
+2019-05-01 12:32:43.107  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Borrando cliente... 214
+2019-05-01 12:32:43.127  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestUpdate - End
+2019-05-01 12:32:43.167  INFO 8435 --- [main] ar.edu.unju.virtual.test.ClienteTest     : Starting ClienteTest on carlos with PID 8435 (started by carlos in /home/carlos/diplomatura/java-web-avanzado/TP02-PintorCarlos)
+2019-05-01 12:32:43.168  INFO 8435 --- [main] ar.edu.unju.virtual.test.ClienteTest     : No active profile set, falling back to default profiles: default
+2019-05-01 12:32:43.426  INFO 8435 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-01 12:32:43.446  INFO 8435 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 4 repository interfaces.
+2019-05-01 12:32:43.551  INFO 8435 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7bee554d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-01 12:32:43.671  INFO 8435 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-05-01 12:32:43.691  INFO 8435 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-05-01 12:32:43.716  INFO 8435 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-01 12:32:43.724  INFO 8435 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-05-01 12:32:43.897  INFO 8435 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-05-01 12:32:43.898  INFO 8435 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@2121d1f9
+2019-05-01 12:32:44.061  INFO 8435 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 12:32:44.501  INFO 8435 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-01 12:32:44.518  WARN 8435 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-01 12:32:44.632  WARN 8435 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-01 12:32:44.866  INFO 8435 --- [main] ar.edu.unju.virtual.test.ClienteTest     : Started ClienteTest in 1.727 seconds (JVM running for 9.965)
+2019-05-01 12:32:45.144  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Rol creado ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@1f3f434
+2019-05-01 12:32:45.152  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente creado Cliente [id=219, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@1f3f434]
+2019-05-01 12:32:45.160  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cuenta creada ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@4bca8eaf
+2019-05-01 12:32:45.169  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento creado Movimiento [id=64, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@4bca8eaf, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=219, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@1f3f434]]
+2019-05-01 12:32:45.178  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento recuperado: Movimiento [id=64, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@5649f55, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=219, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=[ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@5649f55], rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@12270a01]]
+2019-05-01 12:32:45.183  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente: Cliente [id=219, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=[ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@2d2a8819], rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@6b64bf61]
+2019-05-01 12:32:45.252  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Rol creado ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@64688978
+2019-05-01 12:32:45.261  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente creado Cliente [id=220, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@64688978]
+2019-05-01 12:32:45.269  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cuenta creada ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@51f4439e
+2019-05-01 12:32:45.277  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento creado Movimiento [id=65, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@51f4439e, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=220, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@64688978]]
+2019-05-01 12:32:45.353  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Rol creado ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@5ffd35dd
+2019-05-01 12:32:45.369  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente creado Cliente [id=221, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@5ffd35dd]
+2019-05-01 12:32:45.378  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cuenta creada ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@4e20a985
+2019-05-01 12:32:45.386  INFO 8435 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento creado Movimiento [id=66, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@4e20a985, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=221, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@5ffd35dd]]
+2019-05-01 12:32:45.552  INFO 8435 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-01 12:32:45.554  INFO 8435 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 12:32:45.555  INFO 8435 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-01 12:32:45.557  INFO 8435 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 12:32:45.561  INFO 8435 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-05-01 12:32:45.567  INFO 8435 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-05-01 12:32:45.614  INFO 8435 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-05-01 12:32:45.622  INFO 8435 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2019-05-01 12:34:20.535  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Starting Tp02PintorCarlosApplicationTests on carlos with PID 8500 (started by carlos in /home/carlos/diplomatura/java-web-avanzado/TP02-PintorCarlos)
+2019-05-01 12:34:20.541  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : No active profile set, falling back to default profiles: default
+2019-05-01 12:34:21.689  INFO 8500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-01 12:34:21.805  INFO 8500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102ms. Found 4 repository interfaces.
+2019-05-01 12:34:22.407  INFO 8500 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9108ce8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-01 12:34:22.712  INFO 8500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-01 12:34:23.004  INFO 8500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-01 12:34:23.091  INFO 8500 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-01 12:34:23.181  INFO 8500 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-05-01 12:34:23.184  INFO 8500 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-05-01 12:34:23.378  INFO 8500 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-01 12:34:23.542  INFO 8500 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-05-01 12:34:23.794  INFO 8500 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-05-01 12:34:23.801  INFO 8500 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@31e2232f
+2019-05-01 12:34:24.643  INFO 8500 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 12:34:26.071  INFO 8500 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-01 12:34:26.203  WARN 8500 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-01 12:34:26.444  WARN 8500 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-01 12:34:26.930  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Started Tp02PintorCarlosApplicationTests in 6.832 seconds (JVM running for 7.876)
+2019-05-01 12:34:27.011  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestCreate - Start
+2019-05-01 12:34:27.012  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Creando cliente... Cliente [id=null, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=null]
+2019-05-01 12:34:27.383  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Borrando cliente... 222
+2019-05-01 12:34:27.415  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestCreate - End
+2019-05-01 12:34:27.424  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestDelete - Start
+2019-05-01 12:34:27.424  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Creando cliente... Cliente [id=null, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=null]
+2019-05-01 12:34:27.454  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestDelete - End
+2019-05-01 12:34:27.458  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestUpdate - Start
+2019-05-01 12:34:27.458  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Creando cliente... Cliente [id=null, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=null]
+2019-05-01 12:34:27.487  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Borrando cliente... 224
+2019-05-01 12:34:27.498  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : TestUpdate - End
+2019-05-01 12:34:27.532  INFO 8500 --- [main] ar.edu.unju.virtual.test.ClienteTest     : Starting ClienteTest on carlos with PID 8500 (started by carlos in /home/carlos/diplomatura/java-web-avanzado/TP02-PintorCarlos)
+2019-05-01 12:34:27.532  INFO 8500 --- [main] ar.edu.unju.virtual.test.ClienteTest     : No active profile set, falling back to default profiles: default
+2019-05-01 12:34:27.846  INFO 8500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-01 12:34:27.869  INFO 8500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 4 repository interfaces.
+2019-05-01 12:34:27.996  INFO 8500 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9108ce8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-01 12:34:28.144  INFO 8500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-05-01 12:34:28.169  INFO 8500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-05-01 12:34:28.202  INFO 8500 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-01 12:34:28.210  INFO 8500 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-05-01 12:34:28.383  INFO 8500 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2019-05-01 12:34:28.383  INFO 8500 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@31e2232f
+2019-05-01 12:34:28.564  INFO 8500 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 12:34:29.165  INFO 8500 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-01 12:34:29.182  WARN 8500 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-01 12:34:29.289  WARN 8500 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-01 12:34:29.568  INFO 8500 --- [main] ar.edu.unju.virtual.test.ClienteTest     : Started ClienteTest in 2.065 seconds (JVM running for 10.513)
+2019-05-01 12:34:29.856  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Rol creado ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@13714753
+2019-05-01 12:34:29.865  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente creado Cliente [id=229, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@13714753]
+2019-05-01 12:34:29.881  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cuenta creada ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@4d75c604
+2019-05-01 12:34:29.898  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento creado Movimiento [id=67, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@4d75c604, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=229, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@13714753]]
+2019-05-01 12:34:29.911  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento recuperado: Movimiento [id=67, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@646d58cd, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=229, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=[ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@646d58cd], rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@12532e37]]
+2019-05-01 12:34:29.917  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente: Cliente [id=229, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=[ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@7846913f], rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@60b553f]
+2019-05-01 12:34:30.037  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Rol creado ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@4c02899
+2019-05-01 12:34:30.056  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente creado Cliente [id=230, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@4c02899]
+2019-05-01 12:34:30.070  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cuenta creada ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@51468039
+2019-05-01 12:34:30.087  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento creado Movimiento [id=68, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@51468039, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=230, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@4c02899]]
+2019-05-01 12:34:30.215  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Rol creado ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@6f80cf5
+2019-05-01 12:34:30.231  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cliente creado Cliente [id=231, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@6f80cf5]
+2019-05-01 12:34:30.240  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Cuenta creada ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@6706da3d
+2019-05-01 12:34:30.248  INFO 8500 --- [main] e.u.v.T.Tp02PintorCarlosApplicationTests : Movimiento creado Movimiento [id=69, cuenta=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta@6706da3d, fecha=2019-01-01 00:00:00.0, debito=0.0, credito=17000.0, saldo=34000.0, titular=Cliente [id=231, dni=12345678, nombreUsuario=john.doe, clave=j0hn.d03, nombre=John Doe, domicilio=120 Redberry Road, email=john.doe@hotmail.com, estado=HABILITADO, cuentas=null, rol=ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol@6f80cf5]]
+2019-05-01 12:34:30.470  INFO 8500 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-01 12:34:30.472  INFO 8500 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 12:34:30.476  INFO 8500 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-01 12:34:30.477  INFO 8500 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-05-01 12:34:30.489  INFO 8500 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 12:34:30.491  INFO 8500 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-05-01 12:34:30.530  INFO 8500 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-05-01 12:34:30.549  INFO 8500 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
