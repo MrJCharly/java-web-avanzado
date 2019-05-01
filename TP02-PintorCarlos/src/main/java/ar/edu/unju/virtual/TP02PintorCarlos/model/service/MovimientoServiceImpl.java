@@ -18,6 +18,11 @@ public class MovimientoServiceImpl implements MovimientoService {
   public Movimiento create(Movimiento mov) {
     return repo.save(mov);
   }
+  
+  @Override
+  public Movimiento update(Movimiento mov) {
+    return repo.save(mov);
+  }
 
   @Override
   public Movimiento findById(Long id) {
@@ -33,5 +38,5 @@ public class MovimientoServiceImpl implements MovimientoService {
   public Iterable<Movimiento> findByFecha(Timestamp fecha) {
     return repo.findByFecha(fecha);
   }
-
+  
 }

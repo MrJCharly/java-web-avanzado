@@ -2,6 +2,7 @@ package ar.edu.unju.virtual.test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -53,7 +54,7 @@ public class MovimientoTest {
   }
   
   @Test
-  public void testCreate() {
+  public void testCreateAndRetrieve() {
     // Crear rol.
     rolService.create(rol);
     
@@ -81,6 +82,36 @@ public class MovimientoTest {
     // Restaurar DB.
     // Al utilizar cascade=CascadeType.ALL basta con eliminar cliente para
     // eliminar las cuentas asociadas y todos sus movimientos.
+    clienteService.delete(cliente);
+    rolService.delete(rol);
+  }
+  
+  @Test
+  public void testUpdate() {
+    // Crear rol.
+    rolService.create(rol);
+    
+    // Crear cliente.
+    clienteService.create(cliente);
+    
+    // Abrir cuenta.    
+    cuentaService.create(cuenta);
+    
+    // Crear movimiento.
+    movService.create(mov);
+    
+    mov.setCredito(1245d);
+    mov.setDebito(5421d);
+    
+    movService.update(mov);
+    
+    mov = movService.findById(mov.getId());
+    cliente = clienteService.findById(cliente.getId());
+    
+    assertNotNull(mov);
+    assertTrue(mov.getCredito() == 1245d);
+    assertTrue(mov.getDebito() == 5421d);
+    
     clienteService.delete(cliente);
     rolService.delete(rol);
   }
