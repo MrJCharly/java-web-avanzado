@@ -9,6 +9,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 
@@ -34,12 +36,16 @@ public class Cliente {
   @OneToMany(cascade=CascadeType.ALL, mappedBy="titular", fetch=FetchType.EAGER)
   private List<Cuenta> cuentas;
   
+  @ManyToOne
+  @JoinColumn(name="rol_id", nullable = false)
+  private Rol rol;
+  
   public Cliente() {
     
   }
   
   public Cliente(Long dni, String nombreUsuario, String clave, String nombre, String domicilio, String email,
-      String estado) {
+      String estado, Rol rol) {
     super();
     this.dni = dni;
     this.nombreUsuario = nombreUsuario;
@@ -48,6 +54,7 @@ public class Cliente {
     this.domicilio = domicilio;
     this.email = email;
     this.estado = estado;
+    this.rol = rol;
   }
 
   public Long getId() {
@@ -118,10 +125,19 @@ public class Cliente {
     return cuentas;
   }
 
+  public Rol getRol() {
+    return rol;
+  }
+
+  public void setRol(Rol rol) {
+    this.rol = rol;
+  }
+
   @Override
   public String toString() {
     return "Cliente [id=" + id + ", dni=" + dni + ", nombreUsuario=" + nombreUsuario + ", clave=" + clave + ", nombre="
-        + nombre + ", domicilio=" + domicilio + ", email=" + email + ", estado=" + estado + "]";
+        + nombre + ", domicilio=" + domicilio + ", email=" + email + ", estado=" + estado + ", cuentas=" + cuentas
+        + ", rol=" + rol + "]";
   }
   
 }

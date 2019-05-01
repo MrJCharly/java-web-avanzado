@@ -98,5 +98,12 @@ public class Movimiento {
   public void setTitular(Cliente titular) {
     this.titular = titular;
   }
+
+  @Override
+  public String toString() {
+    return "Movimiento [id=" + id + ", cuenta=" + cuenta + ", fecha=" + fecha + ", debito=" + debito + ", credito="
+        + credito + ", saldo=" + saldo + ", titular=" + titular + "]";
+  }
+  
   
 }

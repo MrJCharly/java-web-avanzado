@@ -1,4 +1,4 @@
-package ar.edu.unju.virtual.test.cliente;
+package ar.edu.unju.virtual.test;
 
 import static org.junit.Assert.assertEquals;
 
@@ -12,16 +12,21 @@ import org.springframework.test.context.junit4.SpringRunner;
 import ar.edu.unju.virtual.TP02PintorCarlos.Tp02PintorCarlosApplication;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cliente;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta;
+import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.service.ClienteService;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.service.CuentaService;
-import ar.edu.unju.virtual.test.Util;
+import ar.edu.unju.virtual.TP02PintorCarlos.model.service.RolService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Tp02PintorCarlosApplication.class)
 public class ClienteTest {
+  Rol rol;
 	Cliente cliente;
 	Cuenta cuenta;
 
+	@Autowired
+  private RolService rolService;
+	
   @Autowired
   private ClienteService clienteService;
   
@@ -30,12 +35,16 @@ public class ClienteTest {
 	
   @Before
   public void before_tests() {
-  	cliente = Util.getCliente();
+    rol = new Rol("ADMIN");
+  	cliente = Util.getCliente(rol);
   	cuenta = Util.getCuenta(cliente);
   }  	
 
 	@Test
 	public void testGetCuentas() {
+	  // Crear rol.
+	  rolService.create(rol);
+	  
 		// Crear cliente.
 	  clienteService.create(cliente);
 		
@@ -53,6 +62,7 @@ public class ClienteTest {
 		// Al utilizar cascade=CascadeType.ALL basta con eliminar cliente para
 		// eliminar también las cuentas asociadas.
 		clienteService.delete(cliente);
+		rolService.delete(rol);
 	}		
 
 }

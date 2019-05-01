@@ -7,7 +7,7 @@ import ar.edu.unju.virtual.TP02PintorCarlos.model.dao.ClienteRepository;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cliente;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta;
 
-@Component("service")
+@Component("clienteService")
 public class ClienteServiceImpl implements ClienteService {
 	
   @Autowired  

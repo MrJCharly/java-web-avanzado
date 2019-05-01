@@ -8,10 +8,11 @@ import java.util.Date;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cliente;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Movimiento;
+import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol;
 
 public class Util {
   
-  public static Cliente getCliente() {
+  public static Cliente getCliente(Rol rol) {
     return new Cliente(
       12345678L,
       "john.doe",
@@ -19,7 +20,8 @@ public class Util {
       "John Doe",
       "120 Redberry Road",
       "john.doe@hotmail.com",
-      "HABILITADO"
+      "HABILITADO",
+      rol
     );    
   }
   

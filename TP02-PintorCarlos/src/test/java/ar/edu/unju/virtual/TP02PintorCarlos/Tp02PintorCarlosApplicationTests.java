@@ -84,7 +84,8 @@ public class Tp02PintorCarlosApplicationTests {
       "John Doe",
       "120 Redberry Road",
       "john.doe@hotmail.com",
-      "HABILITADO"
+      "HABILITADO",
+      null
     );
     
     LOG.info("Creando cliente... " + cliente);
