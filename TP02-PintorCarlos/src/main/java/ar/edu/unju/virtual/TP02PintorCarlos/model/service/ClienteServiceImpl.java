@@ -19,6 +19,11 @@ public class ClienteServiceImpl implements ClienteService {
   }
   
   @Override
+  public Cliente update(Cliente cliente) {
+    return clienteRepo.save(cliente);
+  }
+  
+  @Override
   public void delete(Cliente cliente) {
   	clienteRepo.delete(cliente);
   }
@@ -37,6 +42,7 @@ public class ClienteServiceImpl implements ClienteService {
   public Iterable<Cuenta> getCuentas(Cliente cliente) {
     return cliente.getCuentas();
   }
+
 
 
 

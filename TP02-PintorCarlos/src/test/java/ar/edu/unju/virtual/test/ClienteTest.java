@@ -1,6 +1,8 @@
 package ar.edu.unju.virtual.test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -12,20 +14,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 import ar.edu.unju.virtual.TP02PintorCarlos.Tp02PintorCarlosApplication;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cliente;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta;
-import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.service.ClienteService;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.service.CuentaService;
-import ar.edu.unju.virtual.TP02PintorCarlos.model.service.RolService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Tp02PintorCarlosApplication.class)
 public class ClienteTest {
-  Rol rol;
 	Cliente cliente;
 	Cuenta cuenta;
-
-	@Autowired
-  private RolService rolService;
 	
   @Autowired
   private ClienteService clienteService;
@@ -34,17 +30,26 @@ public class ClienteTest {
   private CuentaService cuentaService;
 	
   @Before
-  public void before_tests() {
-    rol = new Rol("ADMIN");
-  	cliente = Util.getCliente(rol);
+  public void before_tests() {    
+  	cliente = Util.getCliente(null);
   	cuenta = Util.getCuenta(cliente);
   }  	
 
+  @Test
+  public void testCreateAndRetrieve() {    
+    // Crear cliente.
+    clienteService.create(cliente);
+    
+    // Recuperar cliente.
+    cliente = clienteService.findById(cliente.getId());
+    
+    assertNotNull(cliente);
+    
+    clienteService.delete(cliente);
+  }
+  
 	@Test
 	public void testGetCuentas() {
-	  // Crear rol.
-	  rolService.create(rol);
-	  
 		// Crear cliente.
 	  clienteService.create(cliente);
 		
@@ -61,8 +66,39 @@ public class ClienteTest {
 		// Restablecer BBDD.
 		// Al utilizar cascade=CascadeType.ALL basta con eliminar cliente para
 		// eliminar también las cuentas asociadas.
-		clienteService.delete(cliente);
-		rolService.delete(rol);
+		clienteService.delete(cliente);		
 	}		
 
+	@Test
+	public void testUpdate() {
+	  // Crear cliente.
+    clienteService.create(cliente);
+    
+    cliente.setNombre("Juan Pérez");
+    
+    clienteService.update(cliente);
+    
+    // Recuperar cliente.
+    cliente = clienteService.findById(cliente.getId());
+    
+    assertNotNull(cliente);
+    assertEquals("Juan Pérez", cliente.getNombre());
+    
+    clienteService.delete(cliente);
+	}
+	
+	@Test
+	public void testDelete() {
+	  // Crear cliente.
+    clienteService.create(cliente);
+    
+    // Recuperar cliente.
+    cliente = clienteService.findById(cliente.getId());
+    
+    assertNotNull(cliente);
+    
+    clienteService.delete(cliente);
+    
+    assertNull(clienteService.findById(cliente.getId()));
+	}
 }
