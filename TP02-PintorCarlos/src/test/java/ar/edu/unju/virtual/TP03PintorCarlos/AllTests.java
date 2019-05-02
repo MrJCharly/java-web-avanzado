@@ -1,4 +1,4 @@
-package ar.edu.unju.virtual.test;
+package ar.edu.unju.virtual.TP03PintorCarlos;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

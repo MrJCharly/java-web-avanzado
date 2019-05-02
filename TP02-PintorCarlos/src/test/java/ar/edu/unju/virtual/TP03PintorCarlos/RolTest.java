@@ -1,4 +1,4 @@
-package ar.edu.unju.virtual.test;
+package ar.edu.unju.virtual.TP03PintorCarlos;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
