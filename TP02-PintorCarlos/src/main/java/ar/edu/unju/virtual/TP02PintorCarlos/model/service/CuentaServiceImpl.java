@@ -19,6 +19,16 @@ public class CuentaServiceImpl implements CuentaService {
 	}
 
 	@Override
+	public Cuenta findById(Long id) {
+	  return cuentaRepo.findById(id).orElse(null);
+	}
+	
+	@Override
+	public void update(Cuenta cuenta) {
+	  cuentaRepo.save(cuenta);
+	}
+	
+	@Override
 	public void deleteById(Long id) {
 	  cuentaRepo.deleteById(id);
 	}
@@ -27,7 +37,4 @@ public class CuentaServiceImpl implements CuentaService {
 	public Cliente getTitular(Cuenta cuenta) {
 		return cuenta.getTitular();
 	}
-
-
-
 }
