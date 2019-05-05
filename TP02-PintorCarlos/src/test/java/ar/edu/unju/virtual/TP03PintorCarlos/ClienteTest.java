@@ -14,14 +14,20 @@ import org.springframework.test.context.junit4.SpringRunner;
 import ar.edu.unju.virtual.TP02PintorCarlos.Tp02PintorCarlosApplication;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cliente;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta;
+import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Rol;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.service.ClienteService;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.service.CuentaService;
+import ar.edu.unju.virtual.TP02PintorCarlos.model.service.RolService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Tp02PintorCarlosApplication.class)
 public class ClienteTest {
+  Rol rol;
 	Cliente cliente;
 	Cuenta cuenta;
+	
+	@Autowired
+  private RolService rolService;
 	
   @Autowired
   private ClienteService clienteService;
@@ -30,9 +36,13 @@ public class ClienteTest {
   private CuentaService cuentaService;
 	
   @Before
-  public void before_tests() {    
-  	cliente = Util.getCliente(null);
+  public void before_tests() {
+    rol = new Rol("USER");
+  	cliente = Util.getCliente(rol);
   	cuenta = Util.getCuenta(cliente);
+  	
+  	// Crear rol.
+  	rolService.create(rol);
   	
   	// Crear cliente.
     clienteService.create(cliente);
@@ -44,6 +54,7 @@ public class ClienteTest {
   public void restaurar_BD() {
     cuentaService.deleteById(cuenta.getId());
     clienteService.deleteById(cliente.getId());
+    rolService.deleteById(rol.getId());
   }
 
   @Test
@@ -71,6 +82,21 @@ public class ClienteTest {
 		restaurar_BD();		
 	}		
 
+	@Test
+	public void testGetRol() {
+	  
+	  // Recuperar cliente con su rol.
+    cliente = clienteService.findById(cliente.getId());
+    
+    // Verificar rol asignado.
+    assertNotNull(cliente);
+    assertNotNull(cliente.getRol());
+    assertEquals("USER", cliente.getRol().getDescripcion());
+    assertEquals(rol.getDescripcion(), cliente.getRol().getDescripcion());
+    
+    restaurar_BD();
+	}
+	
 	@Test
 	public void testUpdate() {
 

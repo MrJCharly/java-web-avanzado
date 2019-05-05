@@ -39,9 +39,7 @@ public class Cliente {
   @JoinColumn(name="rol_id", nullable = false)
   private Rol rol;
   
-  public Cliente() {
-    
-  }
+  public Cliente() {}
   
   public Cliente(Long dni, String nombreUsuario, String clave, String nombre, String domicilio, String email,
       String estado, Rol rol) {

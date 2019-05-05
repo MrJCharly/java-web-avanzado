@@ -43,8 +43,9 @@ public class ClienteServiceImpl implements ClienteService {
     return cliente.getCuentas();
   }
 
-
-
-
+  @Override
+  public Cliente findByUsuarioAndPassword(String usuario, String password) {
+    return clienteRepo.findByNombreUsuarioAndClave(usuario, password);
+  }
 
 }

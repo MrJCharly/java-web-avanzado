@@ -10,4 +10,5 @@ import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cliente;
 @Component("clienteRepo")
 public interface ClienteRepository extends CrudRepository<Cliente, Long> {
   public Optional<Cliente> findByNombre(String nombre);
+  public Cliente findByNombreUsuarioAndClave(String usuario, String password);
 }

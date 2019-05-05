@@ -12,7 +12,6 @@ import ar.edu.unju.virtual.TP02PintorCarlos.Tp02PintorCarlosApplicationTests;
   ClienteTest.class,
   CuentaTest.class,
   MovimientoTest.class, 
-  RolTest.class })
-public class AllTests {
-
-}
+  RolTest.class,
+  FrontServiceTest.class})
+public class AllTests { }

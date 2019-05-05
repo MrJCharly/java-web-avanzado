@@ -10,4 +10,5 @@ public interface ClienteService {
 	public Cliente findById(Long id);
   public void addCuenta(Cuenta cuenta);
   public Iterable<Cuenta> getCuentas(Cliente cliente);
+  public Cliente findByUsuarioAndPassword(String usuario, String password);
 }
