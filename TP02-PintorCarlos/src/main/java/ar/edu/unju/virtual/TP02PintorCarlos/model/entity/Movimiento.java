@@ -26,8 +26,7 @@ public class Movimiento {
   }
 
   @Id
-  @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="movimientos_id_seq")
-  @SequenceGenerator(sequenceName="movimientos_id_seq", allocationSize=1, name="movimientos_id_seq")
+  @GeneratedValue
   private Long id;
   
   @ManyToOne
