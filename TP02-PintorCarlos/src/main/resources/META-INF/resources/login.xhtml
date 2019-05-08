@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+  <title>Login</title>
+</h:head>
+
+<h:body>
+  <h:form id="login-form">
+
+    <p:panel header="Ingrese sus credenciales de usuario">
+    	<p:messages />
+      <h:panelGrid columns="2" cellpadding="4">
+        <h:outputText for="@next" value="Usuario: " style="float:right" />
+        <p:inputText id="username"  value="#{loginBean.username}" required="true" label="Usuario" />
+
+        <h:outputText for="@next" value="Clave: " style="float:right" />
+        <p:password id="password" value="#{loginBean.password}" required="true" label="Clave" />
+
+        <p:commandButton id="submit" value="Ingresar"
+          ajax="false" 
+          validateClient="true" 
+          action="#{loginController.login()}" />
+      </h:panelGrid>
+    </p:panel>    
+
+  </h:form>
+</h:body>
+</html>
