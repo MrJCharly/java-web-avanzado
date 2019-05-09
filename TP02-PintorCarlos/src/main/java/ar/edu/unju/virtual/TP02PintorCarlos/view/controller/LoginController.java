@@ -8,9 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import ar.edu.unju.virtual.TP02PintorCarlos.model.bean.LoginBean;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.dto.ClienteDTO;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.service.FrontService;
+import ar.edu.unju.virtual.TP02PintorCarlos.view.bean.LoginBean;
 
 @Component("loginController")
 @Scope("request")

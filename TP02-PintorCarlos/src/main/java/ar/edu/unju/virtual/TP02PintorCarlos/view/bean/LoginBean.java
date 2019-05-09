@@ -1,4 +1,4 @@
-package ar.edu.unju.virtual.TP02PintorCarlos.model.bean;
+package ar.edu.unju.virtual.TP02PintorCarlos.view.bean;
 
 import javax.inject.Named;
 
