@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<body>
+    <ui:composition>
+		<h:form>  
+		    <p:growl id="messages"/>
+
+		    <p:menubar>
+		        <p:submenu label="Nuevo">
+		            <p:menuitem value="Cliente" url="#" />
+		            <p:menuitem value="Cuenta" url="#" />
+		            <p:separator />
+		            <p:menuitem value="Salir" action="#{clientBean.logout()}" />
+		        </p:submenu>
+		 
+		        <p:submenu label="Ayuda">
+		            <p:menuitem value="Contenidos" url="#" />
+		            <p:submenu label="Buscar">
+		                <p:submenu label="Text">
+		                    <p:menuitem value="Workspace" url="#" />
+		                </p:submenu>
+		                <p:menuitem value="File" url="#" />
+		            </p:submenu>
+		        </p:submenu>
+		 
+		        <f:facet name="options">
+		            <p:outputLabel value="Usuario: #{sesion.username}" style="margin:1px 10px 1px 1px;"/>
+		            <p:commandButton value="Salir" icon="ui-icon ui-icon-power" action="#{clientBean.logout()}"/>
+		        </f:facet>
+		    </p:menubar>
+		</h:form>
+			
+    </ui:composition>
+</body>
+</html>
