@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+  <h:body>
+    <ui:composition template="/template/common/layout.xhtml">
+    	<ui:define name="content">
+	      <h:form id="login-form">
+			    <p:panel header="Nuevo usuario">
+			    	<p:messages />
+			      <h:panelGrid columns="2" cellpadding="4">
+			        			        
+			        <h:outputText for="@next" value="DNI: " style="float:right" />
+			        <p:inputText id="dni"  value="#{clienteBean.dni}" required="true" />						        
+										
+			        <h:outputText for="@next" value="Nombre: " style="float:right" />
+			        <p:inputText id="nombre"  value="#{clienteBean.nombre}" required="true" />	
+			
+							<h:outputText for="@next" value="Usuario: " style="float:right" />
+			        <p:inputText id="nombreUsuario"  value="#{clienteBean.nombreUsuario}" required="true" />
+			        
+			        <h:outputText for="@next" value="Clave: " style="float:right" />
+			        <p:inputText id="clave"  value="#{clienteBean.clave}" required="true" />
+			        
+			        <h:outputText for="@next" value="Domicilio: " style="float:right" />
+			        <p:inputText id="domicilio"  value="#{clienteBean.domicilio}" required="true" />
+			        
+			        <h:outputText for="@next" value="Estado: " style="float:right" />
+			        <p:inputText id="estado"  value="#{clienteBean.estado}" required="true" />
+			
+			        <p:commandButton id="submit" value="Crear"
+			          ajax="false" 
+			          validateClient="true" 
+			          action="#{clienteCtrl.create()}" />
+			      </h:panelGrid>
+			    </p:panel>    			
+			  </h:form>	      
+    	</ui:define>      
+    </ui:composition>
+  </h:body>
+</html>

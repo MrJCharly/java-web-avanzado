@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import javax.faces.view.ViewScoped;
+import javax.inject.Inject;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,12 +13,21 @@ import org.springframework.stereotype.Component;
 
 import ar.edu.unju.virtual.TP02PintorCarlos.Tp02PintorCarlosApplication;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.dto.ClienteDTO;
+import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cliente;
+import ar.edu.unju.virtual.TP02PintorCarlos.model.service.ClienteService;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.service.FrontService;
+import ar.edu.unju.virtual.TP02PintorCarlos.view.bean.ClienteBean;
 
 @Component("clienteCtrl")
 @ViewScoped
 public class ClienteController {
 	private static final Logger LOG = LoggerFactory.getLogger(Tp02PintorCarlosApplication.class);
+	
+	@Autowired
+	private ClienteService clienteService;
+	
+	@Inject
+	private ClienteBean bean;
 	
 	private List<ClienteDTO> clientes;
 	private List<ClienteDTO> filteredClientes;
@@ -45,13 +55,26 @@ public class ClienteController {
 		this.clientes = clientes;
 	}
 
-	public List<ClienteDTO> getClientes() {
-		LOG.info("GET_CLIENTES");
+	public List<ClienteDTO> getClientes() {		
 		return frontService.findClientes();
 	}
 	
-	public List<String> getEstados() {
-		LOG.info("GET_ESTADOS");
+	public List<String> getEstados() {		
 	  return Arrays.asList(estados);
+	}
+	
+	public String create() {		
+		clienteService.create(new Cliente(
+				bean.getDni(),
+				bean.getNombreUsuario(),
+				bean.getClave(),
+				bean.getNombre(),
+				bean.getDomicilio(),
+				"",
+				bean.getEstado(),
+				null
+		));
+		
+		return "clientes";
 	}
 }
