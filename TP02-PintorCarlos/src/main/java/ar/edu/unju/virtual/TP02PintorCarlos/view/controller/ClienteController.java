@@ -77,4 +77,8 @@ public class ClienteController {
 		
 		return "clientes";
 	}
+	
+	public String update(Long id) {
+		return "cliente";
+	}
 }
