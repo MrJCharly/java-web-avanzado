@@ -30,7 +30,8 @@ public class Cliente {
   private String nombre;
   private String domicilio;
   private String email;
-  private String estado;   
+  private String estado;
+  private Long id_cliente;
 
   @OneToMany(mappedBy="titular", fetch=FetchType.EAGER)
   private List<Cuenta> cuentas;
@@ -129,8 +130,16 @@ public class Cliente {
   public void setRol(Rol rol) {
     this.rol = rol;
   }
+  
+  public Long getId_cliente() {
+		return id_cliente;
+	}
 
-  @Override
+	public void setId_cliente(Long id_cliente) {
+		this.id_cliente = id_cliente;
+	}
+
+	@Override
   public String toString() {
     return "Cliente [id=" + id + ", dni=" + dni + ", nombreUsuario=" + nombreUsuario + ", clave=" + clave + ", nombre="
         + nombre + ", domicilio=" + domicilio + ", email=" + email + ", estado=" + estado + ", cuentas=" + cuentas

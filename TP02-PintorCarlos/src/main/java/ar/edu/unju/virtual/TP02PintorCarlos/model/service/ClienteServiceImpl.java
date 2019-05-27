@@ -1,5 +1,7 @@
 package ar.edu.unju.virtual.TP02PintorCarlos.model.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -47,5 +49,10 @@ public class ClienteServiceImpl implements ClienteService {
   public Cliente findByUsuarioAndPassword(String usuario, String password) {
     return clienteRepo.findByNombreUsuarioAndClave(usuario, password);
   }
+
+	@Override
+	public List<Cliente> getClientes() {				
+		return (List<Cliente>) clienteRepo.findAll();
+	}
 
 }

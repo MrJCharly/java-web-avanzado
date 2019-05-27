@@ -38,8 +38,8 @@
 		 
 		 
 		<h:form>
-		    <p:dataTable var="cliente" value="#{clientesCtl.clientes}" widgetVar="clientesTable"
-				emptyMessage="No cars found with given criteria" filteredValue="#{clientesCtl.filteredClientes}">
+		    <p:dataTable var="cliente" value="#{clienteCtrl.clientes}" widgetVar="clientesTable"
+				emptyMessage="No cars found with given criteria" filteredValue="#{clienteCtrl.filteredClientes}">
 				
 				<p:column filterBy="#{cliente.dni}" headerText="DNI" filterMatchMode="contains">
 	            	<h:outputText value="#{cliente.dni}" />
@@ -49,8 +49,8 @@
 	            	<h:outputText value="#{cliente.nombre}" />
 		        </p:column>
 		        
-		        <p:column filterBy="#{cliente.nombre_usuario}" headerText="Usuario" filterMatchMode="contains">
-	            	<h:outputText value="#{cliente.nombre_usuario}" />
+		        <p:column filterBy="#{cliente.nombreUsuario}" headerText="Usuario" filterMatchMode="contains">
+	            	<h:outputText value="#{cliente.nombreUsuario}" />
 		        </p:column>
 		 
 		        <p:column filterBy="#{cliente.estado}" headerText="Estado" filterMatchMode="exact">
@@ -63,9 +63,17 @@
 		            <h:outputText value="#{cliente.estado}" />
 		        </p:column>
 		        		 		        
-		 		<p:column filterBy="#{cliente.estado}" headerText="Titular" filterMatchMode="exact">
-	            	<h:outputText value="#{cliente.estado}" />
-		        </p:column>		 		        		 
+		 		<p:column filterBy="#{cliente.esTitular}" headerText="Titular" filterMatchMode="exact">
+		 				<f:facet name="filter">
+	           	<p:selectOneButton onchange="PF('clientesTable').filter()" styleClass="custom-filter">
+	                 <f:converter converterId="javax.faces.Boolean" />
+	                 <f:selectItem itemLabel="Todos" itemValue="" />
+	                 <f:selectItem itemLabel="Si" itemValue="true" />
+	                 <f:selectItem itemLabel="No" itemValue="false" />
+	             </p:selectOneButton>
+		 				</f:facet>
+            <h:outputText value="#{cliente.esTitular ? 'Si': 'No'}" />
+        </p:column>		 		        		 
 		    </p:dataTable>
 		</h:form>
       </ui:define>	     
