@@ -98,6 +98,6 @@ public class ClienteDTO implements Serializable {
 	}
   
   public boolean getEsTitular() {  	
-  	return this.id_cliente != null;
+  	return this.id_cliente == null;
   }
 }

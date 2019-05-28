@@ -83,5 +83,9 @@ public class ClienteController {
     frontService.saveCliente(cliente);    
 	  
 	  return "clientes.xhtml?faces-redirect=true";
-	}		
+	}
+	
+	public void delete(Long id) {
+		LOG.info("DELETE: " + id);		
+	}
 }

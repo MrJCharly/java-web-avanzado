@@ -36,70 +36,75 @@
 		    }
 		</style>
 		 
+    <p:growl id="message" showDetail="true" />
 		<h:form id="form">
-			<p:growl id="msgs" showDetail="true"/>
 			
 		    <p:dataTable id="clientesTable" var="cliente" value="#{clienteCtrl.clientes}" widgetVar="clientesTable"
-				emptyMessage="No se encontraron resultados." editable="true" filteredValue="#{clienteCtrl.filteredClientes}">
+				emptyMessage="No se encontraron resultados." filteredValue="#{clienteCtrl.filteredClientes}">								
 				
-				<p:ajax event="rowEdit" listener="#{addEditClienteCtrl.onRowEdit}" update=":form:msgs" />
-        <p:ajax event="rowEditCancel" listener="#{addEditClienteCtrl.onRowCancel}" update=":form:msgs" />
-				
-				<p:column filterBy="#{cliente.dni}" headerText="DNI" filterMatchMode="contains">
-         	<h:outputText value="#{cliente.dni}" />
-        </p:column>		 		        		 		    						 						
-						 
-		        <p:column filterBy="#{cliente.nombre}" headerText="Nombre" filterMatchMode="contains">
-		        	<p:cellEditor>
-		            <f:facet name="output"><h:outputText value="#{cliente.nombre}" /></f:facet>
-		            <f:facet name="input"><p:inputText id="modelInput" value="#{cliente.nombre}" style="width:100%"/></f:facet>
-		          </p:cellEditor>	            	
-		        </p:column>
-		        
-		        <p:column filterBy="#{cliente.nombreUsuario}" headerText="Usuario" filterMatchMode="contains">
-	            	<h:outputText value="#{cliente.nombreUsuario}" />
-		        </p:column>
-		 
-		        <p:column filterBy="#{cliente.estado}" headerText="Estado" filterMatchMode="exact">
-		            <f:facet name="filter">
-		                <p:selectOneMenu onchange="PF('clientesTable').filter()" styleClass="custom-filter">
-		                    <f:selectItem itemLabel="" itemValue="#{null}" noSelectionOption="true" />
-		                    <f:selectItems value="#{clienteCtrl.estados}" />
-		                </p:selectOneMenu>
-		            </f:facet>
-		            <h:outputText value="#{cliente.estado}" />
-		        </p:column>
-		        		 		        
-		 		<p:column filterBy="#{cliente.esTitular}" headerText="Titular" filterMatchMode="exact">
-		 				<f:facet name="filter">
-	           	<p:selectOneButton onchange="PF('clientesTable').filter()" styleClass="custom-filter">
-	                 <f:converter converterId="javax.faces.Boolean" />
-	                 <f:selectItem itemLabel="Todos" itemValue="" />
-	                 <f:selectItem itemLabel="Si" itemValue="true" />
-	                 <f:selectItem itemLabel="No" itemValue="false" />
-	             </p:selectOneButton>
-		 				</f:facet>
+  				<p:column filterBy="#{cliente.dni}" headerText="DNI" filterMatchMode="contains">
+           	<h:outputText value="#{cliente.dni}" />
+          </p:column>		 		        		 		    						 						
+  						 
+          <p:column filterBy="#{cliente.nombre}" headerText="Nombre" filterMatchMode="contains">
+          	<p:cellEditor>
+              <f:facet name="output"><h:outputText value="#{cliente.nombre}" /></f:facet>
+              <f:facet name="input"><p:inputText id="modelInput" value="#{cliente.nombre}" style="width:100%"/></f:facet>
+            </p:cellEditor>	            	
+          </p:column>
+          
+          <p:column filterBy="#{cliente.nombreUsuario}" headerText="Usuario" filterMatchMode="contains">
+          	<h:outputText value="#{cliente.nombreUsuario}" />
+          </p:column>
+   
+          <p:column filterBy="#{cliente.estado}" headerText="Estado" filterMatchMode="exact">
+            <f:facet name="filter">
+              <p:selectOneMenu onchange="PF('clientesTable').filter()" styleClass="custom-filter">
+                <f:selectItem itemLabel="" itemValue="#{null}" noSelectionOption="true" />
+                <f:selectItems value="#{clienteCtrl.estados}" />
+              </p:selectOneMenu>
+            </f:facet>
+            <h:outputText value="#{cliente.estado}" />
+          </p:column>
+  		        		 		        
+  		 		<p:column filterBy="#{cliente.esTitular}" headerText="Titular" filterMatchMode="exact">
+  	 				<f:facet name="filter">
+           	  <p:selectOneButton onchange="PF('clientesTable').filter()" styleClass="custom-filter">
+               <f:converter converterId="javax.faces.Boolean" />
+               <f:selectItem itemLabel="Todos" itemValue="" />
+               <f:selectItem itemLabel="Si" itemValue="true" />
+               <f:selectItem itemLabel="No" itemValue="false" />
+              </p:selectOneButton>
+  	 				</f:facet>
             <h:outputText value="#{cliente.esTitular ? 'Si': 'No'}" />
-        </p:column>
-        	
+          </p:column>
+          	
         	<p:column style="width:60px;">
         		<h:panelGrid columns="2" style="border:transparent;">             
-                  <h:outputLink value="cliente.xhtml" styleClass="ui-icon ui-icon-pencil">
-                    <f:param name="id" value="#{cliente.id}" />                    
-                  </h:outputLink> 
-              
-		          <p:commandLink id="deleteLink" styleClass="ui-icon ui-icon-trash"  action="#{clienteCtrl.delete(cliente.id)}"/>        	
+              <h:outputLink value="cliente.xhtml" styleClass="ui-icon ui-icon-pencil">
+                <f:param name="id" value="#{cliente.id}" />                    
+              </h:outputLink> 
+                	          
+              <p:commandLink styleClass="ui-icon ui-icon-trash" action="#{clienteCtrl.delete(cliente.id)}">
+                <p:confirm header="Confirmar" message="Confirma eliminar?" icon="ui-icon ui-icon-alert" />
+              </p:commandLink>        	
         		</h:panelGrid>        		
-	        </p:column>
+          </p:column>
 	        		 		        		 
-		    </p:dataTable>
+	    </p:dataTable>
 		    
 		  <div class="ui-g">
         <div class="ui-g-12">
           <p:commandButton value="Nuevo cliente" styleClass="ui-priority-primary" action="cliente.xhtml?faces-redirect=true"/>
         </div>
-      </div>  
+      </div>
+        
+      <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+        <p:commandButton value="Yes" type="button" styleClass="ui-confirmdialog-yes" icon="ui-icon ui-icon-check" />
+        <p:commandButton value="No" type="button" styleClass="ui-confirmdialog-no" icon="ui-icon-closethick" />
+      </p:confirmDialog>
 		</h:form>
+    
       </ui:define>	     
     </ui:composition>
   </h:body>

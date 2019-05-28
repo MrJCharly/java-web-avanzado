@@ -52,7 +52,7 @@ public class ClienteServiceImpl implements ClienteService {
 
 	@Override
 	public List<Cliente> getClientes() {				
-		return (List<Cliente>) clienteRepo.findAll();
+		return (List<Cliente>) clienteRepo.findAllByOrderByNombreAsc();
 	}
 
 }

@@ -12,6 +12,7 @@ public class ClienteBean {
 	private String clave;
 	private String domicilio;
 	private String estado;
+	private Long id_cliente;
 	
 	public Long getId() {
     return id;
@@ -76,5 +77,14 @@ public class ClienteBean {
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
+
+	public Long getId_cliente() {
+		return id_cliente;
+	}
+
+	public void setId_cliente(Long id_cliente) {
+		this.id_cliente = id_cliente;
+	}
+	
 	
 }
