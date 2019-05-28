@@ -7,6 +7,11 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:p="http://primefaces.org/ui">
 
+  <f:metadata>
+    <f:viewParam name="id" value="#{clienteBean.id}" />
+    <f:viewAction action="#{clienteCtrl.init}" />
+  </f:metadata>	
+
   <h:body>
     <ui:composition template="/template/common/layout.xhtml">
     	<ui:define name="content">
@@ -21,7 +26,10 @@
 			        <h:outputText for="@next" value="Nombre: " style="float:right" />
 			        <p:inputText id="nombre"  value="#{clienteBean.nombre}" required="true" />	
 			
-							<h:outputText for="@next" value="Usuario: " style="float:right" />
+                    <h:outputText for="@next" value="E-mail: " style="float:right" />
+                    <p:inputText id="email"  value="#{clienteBean.email}" required="true" />
+      
+					<h:outputText for="@next" value="Usuario: " style="float:right" />
 			        <p:inputText id="nombreUsuario"  value="#{clienteBean.nombreUsuario}" required="true" />
 			        
 			        <h:outputText for="@next" value="Clave: " style="float:right" />
@@ -36,7 +44,7 @@
 			        <p:commandButton id="submit" value="Crear"
 			          ajax="false" 
 			          validateClient="true" 
-			          action="#{clienteCtrl.create()}" />
+			          action="#{clienteCtrl.save()}" />
 			      </h:panelGrid>
 			    </p:panel>    			
 			  </h:form>	      

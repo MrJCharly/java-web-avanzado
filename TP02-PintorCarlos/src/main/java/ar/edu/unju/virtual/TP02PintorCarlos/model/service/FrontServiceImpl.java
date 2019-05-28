@@ -18,12 +18,13 @@ import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cliente;
 public class FrontServiceImpl implements FrontService {
 	private static final Logger LOG = LoggerFactory.getLogger(Tp02PintorCarlosApplication.class); 
 	
+	private ModelMapper mapper = new ModelMapper();
+	
   @Autowired
   private ClienteService clienteService;
     
   @Override
-  public ClienteDTO findCliente(String usuario, String password) {
-    ModelMapper mapper = new ModelMapper();
+  public ClienteDTO findCliente(String usuario, String password) {    
     Cliente cliente = clienteService.findByUsuarioAndPassword(usuario, password);
     
     return cliente != null ? mapper.map(cliente, ClienteDTO.class) : null;
@@ -31,11 +32,22 @@ public class FrontServiceImpl implements FrontService {
 
 	@Override
 	public List<ClienteDTO> findClientes() {
-		LOG.info("Size: " + clienteService.getClientes().size());
-	  ModelMapper mapper = new ModelMapper();
+		LOG.info("Size: " + clienteService.getClientes().size());	  
 	  Type listType = new TypeToken<List<ClienteDTO>>() {}.getType();
 	  
 		return mapper.map(clienteService.getClientes(), listType);
 	}
+
+  @Override
+  public ClienteDTO findClienteById(Long id) {        
+    return mapper.map(clienteService.findById(id), ClienteDTO.class);
+  }
+
+  @Override
+  public void saveCliente(ClienteDTO dto) {
+    Cliente cliente = new Cliente();
+    mapper.map(dto, cliente);
+    clienteService.update(cliente);
+  }
 
 }

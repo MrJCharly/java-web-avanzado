@@ -4,7 +4,6 @@ import java.util.List;
 
 import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cliente;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta;
-import ar.edu.unju.virtual.TP02PintorCarlos.view.bean.ClienteBean;
 
 public interface ClienteService {	
 	public Cliente create(Cliente cliente);

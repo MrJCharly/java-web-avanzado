@@ -83,8 +83,11 @@
         </p:column>
         	
         	<p:column style="width:60px;">
-        		<h:panelGrid columns="2" style="border:transparent;">
-		        	<p:commandLink id="updateLink" styleClass="ui-icon ui-icon-pencil"  action="#{clienteCtrl.update(cliente.id)}"/>
+        		<h:panelGrid columns="2" style="border:transparent;">             
+                  <h:outputLink value="cliente.xhtml" styleClass="ui-icon ui-icon-pencil">
+                    <f:param name="id" value="#{cliente.id}" />                    
+                  </h:outputLink> 
+              
 		          <p:commandLink id="deleteLink" styleClass="ui-icon ui-icon-trash"  action="#{clienteCtrl.delete(cliente.id)}"/>        	
         		</h:panelGrid>        		
 	        </p:column>

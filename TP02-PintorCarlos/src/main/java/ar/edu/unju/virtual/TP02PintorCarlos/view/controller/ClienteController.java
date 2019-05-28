@@ -8,6 +8,7 @@ import javax.inject.Inject;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -43,7 +44,20 @@ public class ClienteController {
     estados[1] = "INHABILITADO";    
 	}
 	
-	public List<ClienteDTO> getFilteredClientes() {
+	public void init() {
+	  LOG.info("BEAN ID:" + bean.getId());
+	  
+	  if (bean.getId() != null) {
+	    populateClienteBeanFromId(bean);
+	  }
+	}
+	
+	private void populateClienteBeanFromId(ClienteBean bean) {
+    ClienteDTO cliente = frontService.findClienteById(bean.getId());    
+    BeanUtils.copyProperties(cliente, bean);
+  }
+
+  public List<ClienteDTO> getFilteredClientes() {
 		return filteredClientes;
 	}
 
@@ -63,22 +77,11 @@ public class ClienteController {
 	  return Arrays.asList(estados);
 	}
 	
-	public String create() {		
-		clienteService.create(new Cliente(
-				bean.getDni(),
-				bean.getNombreUsuario(),
-				bean.getClave(),
-				bean.getNombre(),
-				bean.getDomicilio(),
-				"",
-				bean.getEstado(),
-				null
-		));
-		
-		return "clientes";
-	}
-	
-	public String update(Long id) {
-		return "cliente";
-	}
+	public String save() {
+	  ClienteDTO cliente = new ClienteDTO();
+    BeanUtils.copyProperties(bean, cliente);    
+    frontService.saveCliente(cliente);    
+	  
+	  return "clientes.xhtml?faces-redirect=true";
+	}		
 }

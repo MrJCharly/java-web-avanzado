@@ -4,21 +4,32 @@ import java.io.Serializable;
 
 public class ClienteDTO implements Serializable {
   private static final long serialVersionUID = 1L;
-  private String dni;
+  private Long id;
+  private Long dni;
   private String nombre;
-  private String nombreUsuario;  
+  private String nombreUsuario;
+  private String clave;
   private String email;
+  private String domicilio;
   private String estado;
   private String rolDescripcion;
   private Long id_cliente;
   
-  public ClienteDTO() { }
+  public ClienteDTO() { }    
   
-  public String getDni() {
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public Long getDni() {
 		return dni;
 	}
 
-	public void setDni(String dni) {
+	public void setDni(Long dni) {
 		this.dni = dni;
 	}
 
@@ -34,6 +45,14 @@ public class ClienteDTO implements Serializable {
     return nombreUsuario;
   }
 
+  public String getClave() {
+    return clave;
+  }
+
+  public void setClave(String clave) {
+    this.clave = clave;
+  }
+
   public void setNombreUsuario(String nombreUsuario) {
     this.nombreUsuario = nombreUsuario;
   }
@@ -44,6 +63,14 @@ public class ClienteDTO implements Serializable {
 
   public void setEmail(String email) {
     this.email = email;
+  }
+  
+  public String getDomicilio() {
+    return domicilio;
+  }
+
+  public void setDomicilio(String domicilio) {
+    this.domicilio = domicilio;
   }
 
   public String getEstado() {
