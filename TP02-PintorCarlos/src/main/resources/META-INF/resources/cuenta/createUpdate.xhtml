@@ -24,7 +24,10 @@
               <p:inputText id="dni"  value="#{cuentaBean.numero}" required="true" />						        
       							
               <h:outputText for="@next" value="Titular: " style="float:right" />
-              <p:inputText id="nombre"  value="#{cuentaBean.id_cliente}" required="true" />	
+              <p:selectOneMenu value="#{cuentaBean.titular.id}">
+                <f:selectItem itemLabel="" itemValue="#{null}" noSelectionOption="true" />
+                <f:selectItems value="#{clienteCtrl.clientes}" var="cliente" itemValue="#{cliente.id}" itemLabel="#{cliente.nombre}" />
+              </p:selectOneMenu>	
   	
               <h:outputText for="@next" value="Límite extracción: " style="float:right" />
               <p:inputText id="email"  value="#{cuentaBean.limiteExtraccion}" required="true" />      			    

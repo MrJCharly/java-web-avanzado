@@ -25,18 +25,18 @@
               <h:outputText value="#{cuenta.fechaIngreso}" />               
             </p:column>
             
-            <p:column filterBy="#{cuenta.saldo}" headerText="Saldo" filterMatchMode="contains">
-              <h:outputText value="#{cuenta.saldo}" />
+            <p:column filterBy="#{cuenta.saldoActual}" headerText="Saldo" filterMatchMode="contains">
+              <h:outputText value="#{cuenta.saldoActual}" />
             </p:column>
      
-            <p:column filterBy="#{cuenta.id_cliente}" headerText="Titular" filterMatchMode="exact">
+            <p:column filterBy="#{cuenta.titular.id}" headerText="Titular" filterMatchMode="exact">
               <f:facet name="filter">
                 <p:selectOneMenu onchange="PF('cuentasTable').filter()" styleClass="custom-filter">
                   <f:selectItem itemLabel="" itemValue="#{null}" noSelectionOption="true" />
-                  <f:selectItems value="#{clienteCtrl.clientes}" />
+                  <f:selectItems value="#{clienteCtrl.clientes}" var="cliente" itemValue="#{cliente.id}" itemLabel="#{cliente.nombre}" />
                 </p:selectOneMenu>
               </f:facet>
-              <h:outputText value="#{cuenta.id_cliente}" />
+              <h:outputText value="#{cuenta.titular.nombre}" />
             </p:column>
      
             <p:column filterBy="#{cuenta.estado}" headerText="Estado" filterMatchMode="exact">
@@ -64,7 +64,7 @@
             
           <div class="ui-g">
             <div class="ui-g-12">
-              <p:commandButton value="Nueva cuenta" styleClass="ui-priority-primary" action="createUpdate.xhtml?faces-redirect=true"/>
+              <p:commandButton value="Nueva cuenta" styleClass="ui-priority-primary" action="#{cuentaCtrl.create()}"/>
             </div>
           </div>
             

@@ -3,14 +3,17 @@ package ar.edu.unju.virtual.TP02PintorCarlos.model.dto;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
+import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cliente;
+
 public class CuentaDTO implements Serializable {
   private static final long serialVersionUID = 1L;
   private Long id;
   private String numero;
   private Timestamp fechaIngreso;
-  private String saldo;
-  private String estado;
-  private Long id_cliente;
+  private Long limiteExtraccion;
+  private Double saldoActual;
+  private String estado;  
+  private Cliente titular;
   
   public CuentaDTO() { }
   
@@ -30,12 +33,12 @@ public class CuentaDTO implements Serializable {
     this.numero = numero;
   }
 
-  public String getSaldo() {
-    return saldo;
+  public Double getsaldoActual() {
+    return saldoActual;
   }
 
-  public void setSaldo(String saldo) {
-    this.saldo = saldo;
+  public void setsaldoActual(Double saldoActual) {
+    this.saldoActual = saldoActual;
   }
 
   public String getEstado() {
@@ -46,21 +49,29 @@ public class CuentaDTO implements Serializable {
     this.estado = estado;
   }
 
-  public Timestamp getFechaIngreso() {
+  public Long getLimiteExtraccion() {
+		return limiteExtraccion;
+	}
+
+	public void setLimiteExtraccion(Long limiteExtraccion) {
+		this.limiteExtraccion = limiteExtraccion;
+	}
+
+	public Timestamp getFechaIngreso() {
     return fechaIngreso;
   }
 
   public void setFechaIngreso(Timestamp fechaIngreso) {
     this.fechaIngreso = fechaIngreso;
-  }
+  }  
 
-  public Long getId_cliente() {
-    return id_cliente;
-  }
+	public Cliente getTitular() {
+		return titular;
+	}
 
-  public void setId_cliente(Long id_cliente) {
-    this.id_cliente = id_cliente;
-  }
+	public void setTitular(Cliente titular) {
+		this.titular = titular;
+	}
   
   
 }
