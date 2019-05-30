@@ -32,7 +32,7 @@ public class FrontServiceImpl implements FrontService {
 
 	@Override
 	public List<ClienteDTO> findClientes() {
-		LOG.info("Size: " + clienteService.getClientes().size());	  
+		//LOG.info("Size: " + clienteService.getClientes().size());	  
 	  Type listType = new TypeToken<List<ClienteDTO>>() {}.getType();
 	  
 		return mapper.map(clienteService.getClientes(), listType);

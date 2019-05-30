@@ -1,5 +1,7 @@
 package ar.edu.unju.virtual.TP02PintorCarlos.model.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -37,4 +39,9 @@ public class CuentaServiceImpl implements CuentaService {
 	public Cliente getTitular(Cuenta cuenta) {
 		return cuenta.getTitular();
 	}
+
+  @Override
+  public List<Cuenta> findAll() {   
+    return (List<Cuenta>) cuentaRepo.findAll();
+  }
 }
