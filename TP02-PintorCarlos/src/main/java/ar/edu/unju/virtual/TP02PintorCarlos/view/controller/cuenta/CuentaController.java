@@ -27,6 +27,7 @@ public class CuentaController {
 	
 	private List<CuentaDTO> cuentas;
   private List<CuentaDTO> filteredCuentas;
+  private CuentaDTO currCuenta;
   private final static String[] estados;
   
   @Autowired
@@ -78,7 +79,15 @@ public class CuentaController {
     this.filteredCuentas = filteredCuentas;
   }
   
-  public String create() {  	
+  public CuentaDTO getCurrCuenta() {
+		return currCuenta;
+	}
+
+	public void setCurrCuenta(CuentaDTO currCuenta) {
+		this.currCuenta = currCuenta;
+	}
+
+	public String create() {  	
   	return "createUpdate.xhtml?faces-redirect=true";
   }
   
