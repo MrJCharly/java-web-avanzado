@@ -16,7 +16,7 @@
     <ui:composition template="/template/common/layout.xhtml">
     	<ui:define name="content">
         <h:form id="login-form">
-          <p:panel header="Nueva cuenta">
+          <p:panel header="#{cuentaBean.id != null ? 'Modificar' : 'Nueva'} cuenta">
             <p:messages />
             
             <h:panelGrid columns="2" cellpadding="4">  	        			        
@@ -37,7 +37,7 @@
                 <f:selectItems value="#{cuentaCtrl.estados}" />
               </p:selectOneMenu>			        
     	
-              <p:commandButton id="submit" value="#{cuentaBean.id > 0 ? 'Grabar' : 'Crear'}"
+              <p:commandButton id="submit" value="#{cuentaBean.id > 0 ? 'Modificar' : 'Crear'}"
                 ajax="false" 
                 validateClient="true" 
                 action="#{cuentaCtrl.save()}" />

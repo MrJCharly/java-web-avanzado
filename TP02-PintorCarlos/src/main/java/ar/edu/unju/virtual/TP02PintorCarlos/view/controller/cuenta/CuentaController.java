@@ -4,20 +4,28 @@ import java.sql.Timestamp;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import org.primefaces.component.log.Log;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 
+import ar.edu.unju.virtual.TP02PintorCarlos.Tp02PintorCarlosApplication;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.dto.CuentaDTO;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.service.front.CuentaFrontService;
 import ar.edu.unju.virtual.TP02PintorCarlos.view.bean.CuentaBean;
 
 @Named("cuentaCtrl")
 @Scope("request")
-public class CuentaController {  
+public class CuentaController {
+	private static final Logger LOG = LoggerFactory.getLogger(Tp02PintorCarlosApplication.class);
+	
+	private List<CuentaDTO> cuentas;
   private List<CuentaDTO> filteredCuentas;
   private final static String[] estados;
   
@@ -33,6 +41,12 @@ public class CuentaController {
     estados[1] = "INHABILITADO";    
   }
 
+  @PostConstruct
+  public void postConstruct() {
+    cuentas = cuentaFrontService.findAll();
+    LOG.info("POSTCONSTRUCT");
+  }
+  
   public void init() {
   	if (bean.getId() != null) {
 	    populateClienteBeanFromId(bean);
@@ -48,11 +62,15 @@ public class CuentaController {
     return Arrays.asList(estados);
   }
 
-  public List<CuentaDTO> getCuentas() {
-    return cuentaFrontService.findAll();
+  public List<CuentaDTO> getCuentas() {  	
+    return cuentas;
   }
 
-  public List<CuentaDTO> getFilteredCuentas() {
+  public void setCuentas(List<CuentaDTO> cuentas) {
+		this.cuentas = cuentas;
+	}
+
+	public List<CuentaDTO> getFilteredCuentas() {
     return filteredCuentas;
   }
 
@@ -75,5 +93,10 @@ public class CuentaController {
   	
   	cuentaFrontService.save(bean);
   	return "admin.xhtml?faces-redirect=true";
+  }
+  
+  public void delete(CuentaDTO cuenta) {
+  	cuentas.remove(cuenta);
+  	cuentaFrontService.delete(cuenta.getId());  	
   }
 }

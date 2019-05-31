@@ -73,5 +73,7 @@ public class CuentaDTO implements Serializable {
 		this.titular = titular;
 	}
   
-  
+  public String getFormattedNumero() {
+  	return String.format("%15s", numero).replace(' ', '0');
+  }
 }

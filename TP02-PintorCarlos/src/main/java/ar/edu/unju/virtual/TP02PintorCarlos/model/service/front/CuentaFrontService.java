@@ -9,4 +9,5 @@ public interface CuentaFrontService {
   public List<CuentaDTO> findAll();
 	public CuentaDTO findCuentaById(Long id);
 	public void save(CuentaBean bean);
+	public void delete(Long id);
 }

@@ -43,4 +43,9 @@ public class CuentaFrontServiceImpl implements CuentaFrontService {
 		cuentaService.update(cuenta);
 	}
 
+	@Override
+	public void delete(Long id) {
+		cuentaService.deleteById(id);
+	}
+
 }

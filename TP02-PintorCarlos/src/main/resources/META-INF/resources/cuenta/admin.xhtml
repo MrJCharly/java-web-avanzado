@@ -18,7 +18,7 @@
             emptyMessage="No se encontraron resultados." filteredValue="#{cuentaCtrl.filteredCuentas}">               
             
             <p:column filterBy="#{cuenta.numero}" headerText="Número" filterMatchMode="contains">
-              <h:outputText value="#{cuenta.numero}" />
+              <h:outputText value="#{cuenta.formattedNumero}" />
             </p:column>                                                   
                  
             <p:column filterBy="#{cuenta.fechaIngreso}" headerText="Ingreso" filterMatchMode="contains">
@@ -55,8 +55,13 @@
                   <f:param name="id" value="#{cuenta.id}" />                    
                 </h:outputLink> 
                               
-                <p:commandLink styleClass="ui-icon ui-icon-trash" action="#{cuentaCtrl.delete(cuenta.id)}">
-                  <p:confirm header="Confirmar" message="Confirma eliminar?" icon="ui-icon ui-icon-alert" />
+                <p:commandLink styleClass="ui-icon ui-icon-trash" action="#{cuentaCtrl.delete(cuenta)}"  
+                    update="@form">
+                  <p:confirm 
+                    header="Confirmar" 
+                    message="Confirma eliminar?" 
+                    icon="ui-icon ui-icon-alert"
+                    ajax="true"/>
                 </p:commandLink>          
               </h:panelGrid>            
             </p:column>                                  
