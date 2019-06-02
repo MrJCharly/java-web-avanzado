@@ -1,6 +1,7 @@
 package ar.edu.unju.virtual.TP02PintorCarlos.model.dto;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class ClienteDTO implements Serializable {
   private static final long serialVersionUID = 1L;
@@ -14,6 +15,7 @@ public class ClienteDTO implements Serializable {
   private String estado;
   private String rolDescripcion;
   private Long id_cliente;
+  private List<CuentaDTO> cuentas;
   
   public ClienteDTO() { }    
   
@@ -96,6 +98,18 @@ public class ClienteDTO implements Serializable {
 	public void setId_cliente(Long id_cliente) {
 		this.id_cliente = id_cliente;
 	}
+  
+  public List<CuentaDTO> getCuentas() {
+    return cuentas;
+  }
+
+  public void setCuentas(List<CuentaDTO> cuentas) {
+    this.cuentas = cuentas;
+  }
+
+  public CuentaDTO getMainCuenta() {
+    return !cuentas.isEmpty() ? cuentas.get(0) : null;
+  }
   
   public boolean getEsTitular() {  	
   	return this.id_cliente == null;

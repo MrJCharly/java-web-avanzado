@@ -14,6 +14,7 @@ public class CuentaDTO implements Serializable {
   private Double saldoActual;
   private String estado;  
   private Cliente titular;
+  private Long id_cliente;
   
   public CuentaDTO() { }
   
@@ -75,5 +76,17 @@ public class CuentaDTO implements Serializable {
   
   public String getFormattedNumero() {
   	return String.format("%15s", numero).replace(' ', '0');
+  }
+  
+  public Long getId_cliente() {
+    return id_cliente;
+  }
+
+  public void setId_cliente(Long id_cliente) {
+    this.id_cliente = id_cliente;
+  }
+
+  public String toString() {
+    return getFormattedNumero();
   }
 }

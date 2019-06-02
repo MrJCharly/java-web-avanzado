@@ -11,40 +11,55 @@
   	
     <ui:composition template="/template/common/layout.xhtml">
       <ui:define name="content">
-      <h2>Clientes</h2>
+      
 	  	<style type="text/css">
-		    .ui-datatable .ui-datatable-header {
-		        text-align: right !important;
-		    }
-		     
-		    .ui-button-text-only .ui-button-text {
-		        padding: 0.3em 0.4em;
-		    }
-		     
-		    .ui-selectcheckboxmenu-panel .ui-selectcheckboxmenu-header .ui-chkbox {
-		        visibility: hidden;
-		    }
-		     
-		    .ui-filter-column .ui-column-customfilter .custom-filter {
-		        width: 100%;
-		        box-sizing: border-box;
-		    }
-		     
-		    .year-spinner input {
-		        width: 100%;
-		        box-sizing: border-box;
-		    }
+          body {
+            font-size: 14px;
+          }
+          
+          .value {
+            font-weight: bold;
+            text-align: left;
+          }
+           
+          .ui-datatable {
+            margin: 25px 0
+          }
+            
+          .ui-datatable .ui-datatable-footer {
+            text-align:left;
+          }                    
+           
+          .ui-button-text-only .ui-button-text {
+              padding: 0.3em 0.4em;
+          }
+           
+          .ui-selectcheckboxmenu-panel .ui-selectcheckboxmenu-header .ui-chkbox {
+              visibility: hidden;
+          }
+           
+          .ui-filter-column .ui-column-customfilter .custom-filter {
+              width: 100%;
+              box-sizing: border-box;
+          }
+           
+          .year-spinner input {
+              width: 100%;
+              box-sizing: border-box;
+          }
 		</style>
 		 
-    <p:growl id="message" showDetail="true" />
+        <p:growl id="message" showDetail="true" />
 		<h:form id="form">
 			
-		    <p:dataTable id="clientesTable" var="cliente" value="#{clienteCtrl.clientes}" widgetVar="clientesTable"
-				emptyMessage="No se encontraron resultados." filteredValue="#{clienteCtrl.filteredClientes}">								
-				
-  				<p:column filterBy="#{cliente.dni}" headerText="DNI" filterMatchMode="contains">
-           	<h:outputText value="#{cliente.dni}" />
-          </p:column>		 		        		 		    						 						
+          <p:dataTable id="clientesTable" var="cliente" value="#{clienteCtrl.clientes}" widgetVar="clientesTable"
+            emptyMessage="No se encontraron resultados." filteredValue="#{clienteCtrl.filteredClientes}">								
+			
+            <f:facet name="header">Clientes</f:facet>
+      	
+			<p:column filterBy="#{cliente.dni}" headerText="DNI" filterMatchMode="contains">
+             	<h:outputText value="#{cliente.dni}" />
+            </p:column>		 		        		 		    						 						
   						 
           <p:column filterBy="#{cliente.nombre}" headerText="Nombre" filterMatchMode="contains">
           	<p:cellEditor>
@@ -57,6 +72,27 @@
           	<h:outputText value="#{cliente.nombreUsuario}" />
           </p:column>
    
+          <p:column filterBy="#{cliente.mainCuenta.formattedNumero}" headerText="Cuenta" filterMatchMode="contains">
+            <h:outputText value="#{cliente.mainCuenta}" />                        
+            
+            <p:commandButton 
+              value="Crear cuenta" 
+              action="#{clienteCtrl.createCuenta(cliente)}" 
+              rendered="#{cliente.mainCuenta == null}" />              
+          </p:column>
+     		        		 		        
+          <p:column filterBy="#{cliente.esTitular}" headerText="Titular" filterMatchMode="exact">
+			<f:facet name="filter">
+           	  <p:selectOneButton onchange="PF('clientesTable').filter()" styleClass="custom-filter">
+                <f:converter converterId="javax.faces.Boolean" />
+                <f:selectItem itemLabel="Todos" itemValue="" />
+                <f:selectItem itemLabel="Si" itemValue="true" />
+                <f:selectItem itemLabel="No" itemValue="false" />
+              </p:selectOneButton>
+			</f:facet>
+            <h:outputText value="#{cliente.esTitular ? 'Si': 'No'}" />
+          </p:column>
+          	
           <p:column filterBy="#{cliente.estado}" headerText="Estado" filterMatchMode="exact">
             <f:facet name="filter">
               <p:selectOneMenu onchange="PF('clientesTable').filter()" styleClass="custom-filter">
@@ -66,19 +102,7 @@
             </f:facet>
             <h:outputText value="#{cliente.estado}" />
           </p:column>
-  		        		 		        
-  		 		<p:column filterBy="#{cliente.esTitular}" headerText="Titular" filterMatchMode="exact">
-  	 				<f:facet name="filter">
-           	  <p:selectOneButton onchange="PF('clientesTable').filter()" styleClass="custom-filter">
-               <f:converter converterId="javax.faces.Boolean" />
-               <f:selectItem itemLabel="Todos" itemValue="" />
-               <f:selectItem itemLabel="Si" itemValue="true" />
-               <f:selectItem itemLabel="No" itemValue="false" />
-              </p:selectOneButton>
-  	 				</f:facet>
-            <h:outputText value="#{cliente.esTitular ? 'Si': 'No'}" />
-          </p:column>
-          	
+          
         	<p:column style="width:60px;">
         		<h:panelGrid columns="2" style="border:transparent;">             
               <h:outputLink value="cliente.xhtml" styleClass="ui-icon ui-icon-pencil">

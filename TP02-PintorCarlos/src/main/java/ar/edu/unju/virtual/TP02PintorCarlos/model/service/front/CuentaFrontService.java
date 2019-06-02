@@ -8,6 +8,7 @@ import ar.edu.unju.virtual.TP02PintorCarlos.view.bean.CuentaBean;
 public interface CuentaFrontService {
   public List<CuentaDTO> findAll();
 	public CuentaDTO findCuentaById(Long id);
+	public CuentaDTO findByNumero(String numero);
 	public void save(CuentaBean bean);
 	public void delete(Long id);
 }

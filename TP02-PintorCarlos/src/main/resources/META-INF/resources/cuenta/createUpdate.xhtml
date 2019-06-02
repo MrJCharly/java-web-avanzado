@@ -9,6 +9,7 @@
   
   <f:metadata>
     <f:viewParam name="id" value="#{cuentaBean.id}" />
+    <f:viewParam name="id_cliente" value="#{cuentaBean.id_cliente}" />
     <f:viewAction action="#{cuentaCtrl.init}" />
   </f:metadata>	
 
@@ -20,14 +21,11 @@
             <p:messages />
             
             <h:panelGrid columns="2" cellpadding="4">  	        			        
-              <h:outputText for="@next" value="Número: " style="float:right" />
-              <p:inputText id="dni"  value="#{cuentaBean.numero}" required="true" />						        
-      							
               <h:outputText for="@next" value="Titular: " style="float:right" />
-              <p:selectOneMenu value="#{cuentaBean.titular.id}" required="true">
-                <f:selectItem itemLabel="" itemValue="#{null}" noSelectionOption="true" />
-                <f:selectItems value="#{clienteCtrl.clientes}" var="cliente" itemValue="#{cliente.id}" itemLabel="#{cliente.nombre}" />
-              </p:selectOneMenu>	
+              <p:inputText value="#{cuentaBean.titular}" disabled="true" />
+              	
+              <h:outputText for="@next" value="Número: " style="float:right" />
+              <p:inputText id="dni"  value="#{cuentaBean.numero}" required="true" />						              							
   	
               <h:outputText for="@next" value="Límite extracción: " style="float:right" />
               <p:inputText id="email"  value="#{cuentaBean.limiteExtraccion}" required="true" />      			    
@@ -35,12 +33,17 @@
               <h:outputText for="@next" value="Estado: " style="float:right" />
               <p:selectOneMenu styleClass="custom-filter" value="#{cuentaBean.estado}">                
                 <f:selectItems value="#{cuentaCtrl.estados}" />
-              </p:selectOneMenu>			        
-    	
-              <p:commandButton id="submit" value="#{cuentaBean.id > 0 ? 'Modificar' : 'Crear'}"
+              </p:selectOneMenu>			            	                                   
+             
+              <p:commandButton value="Crear" style="#{cuentaBean.id > 0 ? 'display:none' : ''}"
                 ajax="false" 
                 validateClient="true" 
-                action="#{cuentaCtrl.save()}" />
+                action="#{cuentaCtrl.create()}" />
+                
+              <p:commandButton value="Modificar" style="#{cuentaBean.id > 0 ? '' : 'display:none'}"
+                ajax="false" 
+                validateClient="true" 
+                action="#{cuentaCtrl.update()}" />  
   	        </h:panelGrid>
           </p:panel>    			
   	     </h:form>	      

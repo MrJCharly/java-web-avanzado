@@ -48,4 +48,10 @@ public class CuentaFrontServiceImpl implements CuentaFrontService {
 		cuentaService.deleteById(id);
 	}
 
+  @Override
+  public CuentaDTO findByNumero(String numero) {
+    Cuenta cuenta = cuentaService.findByNumero(numero);            
+    return cuenta != null ? mapper.map(cuenta, CuentaDTO.class) : null;
+  }
+
 }

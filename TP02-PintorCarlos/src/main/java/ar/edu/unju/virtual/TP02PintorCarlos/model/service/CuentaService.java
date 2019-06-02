@@ -8,6 +8,7 @@ import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cuenta;
 public interface CuentaService {
   public List<Cuenta> findAll();
   public Cuenta findById(Long id);
+  public Cuenta findByNumero(String numero);
 	public Cuenta create(Cuenta cuenta);	
 	public void update(Cuenta cuenta);
 	public void deleteById(Long id);

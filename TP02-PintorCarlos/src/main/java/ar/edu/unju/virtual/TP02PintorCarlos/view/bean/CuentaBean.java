@@ -6,10 +6,11 @@ import javax.inject.Named;
 
 import org.springframework.context.annotation.Scope;
 
+import ar.edu.unju.virtual.TP02PintorCarlos.model.dto.ClienteDTO;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cliente;
 
 @Named("cuentaBean")
-@Scope("request")
+@Scope("view")
 public class CuentaBean {
 	private Long id;
   private String numero;
@@ -17,7 +18,8 @@ public class CuentaBean {
   private Double saldoActual;
   private Long limiteExtraccion;
   private String estado;  
-  private Cliente titular = new Cliente();  
+  private String titular;
+  private Long id_cliente;
 
 	public Long getId() {
 		return id;
@@ -67,12 +69,20 @@ public class CuentaBean {
 		this.estado = estado;
 	}
 
-	public Cliente getTitular() {
+	public String getTitular() {
 		return titular;
 	}
 
-	public void setTitular(Cliente titular) {
+	public void setTitular(String titular) {
 		this.titular = titular;
-	}      
+	}
+
+  public Long getId_cliente() {
+    return id_cliente;
+  }
+
+  public void setId_cliente(Long idCliente) {
+    this.id_cliente = idCliente;
+  }      
 	
 }

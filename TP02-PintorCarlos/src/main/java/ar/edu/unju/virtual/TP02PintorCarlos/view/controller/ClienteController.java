@@ -18,6 +18,7 @@ import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cliente;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.service.ClienteService;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.service.FrontService;
 import ar.edu.unju.virtual.TP02PintorCarlos.view.bean.ClienteBean;
+import ar.edu.unju.virtual.TP02PintorCarlos.view.bean.CuentaBean;
 
 @Component("clienteCtrl")
 @ViewScoped
@@ -29,6 +30,9 @@ public class ClienteController {
 	
 	@Inject
 	private ClienteBean bean;
+	
+	@Inject
+	private CuentaBean cuentaBean;
 	
 	private List<ClienteDTO> clientes;
 	private List<ClienteDTO> filteredClientes;
@@ -87,5 +91,11 @@ public class ClienteController {
 	
 	public void delete(Long id) {
 		LOG.info("DELETE: " + id);		
+	}
+	
+	public String createCuenta(ClienteDTO cliente) {
+	  cuentaBean.setTitular(cliente);
+	  
+	  return "cuenta/createUpdate.xhtml?faces-redirect=true";
 	}
 }
