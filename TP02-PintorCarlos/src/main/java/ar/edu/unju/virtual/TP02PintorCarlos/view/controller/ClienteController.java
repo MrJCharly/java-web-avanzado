@@ -14,9 +14,9 @@ import org.springframework.stereotype.Component;
 
 import ar.edu.unju.virtual.TP02PintorCarlos.Tp02PintorCarlosApplication;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.dto.ClienteDTO;
-import ar.edu.unju.virtual.TP02PintorCarlos.model.entity.Cliente;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.service.ClienteService;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.service.FrontService;
+import ar.edu.unju.virtual.TP02PintorCarlos.util.SessionUtil;
 import ar.edu.unju.virtual.TP02PintorCarlos.view.bean.ClienteBean;
 import ar.edu.unju.virtual.TP02PintorCarlos.view.bean.CuentaBean;
 
@@ -24,6 +24,9 @@ import ar.edu.unju.virtual.TP02PintorCarlos.view.bean.CuentaBean;
 @ViewScoped
 public class ClienteController {
 	private static final Logger LOG = LoggerFactory.getLogger(Tp02PintorCarlosApplication.class);
+	
+	@Autowired
+	private SessionUtil sessionUtil;
 	
 	@Autowired
 	private ClienteService clienteService;
@@ -94,8 +97,7 @@ public class ClienteController {
 	}
 	
 	public String createCuenta(ClienteDTO cliente) {
-	  cuentaBean.setTitular(cliente);
-	  
+		sessionUtil.put("curr_cliente", cliente);	  	  
 	  return "cuenta/createUpdate.xhtml?faces-redirect=true";
 	}
 }

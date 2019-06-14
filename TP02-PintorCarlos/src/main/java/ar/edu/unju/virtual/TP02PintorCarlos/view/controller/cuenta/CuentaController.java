@@ -21,6 +21,7 @@ import ar.edu.unju.virtual.TP02PintorCarlos.model.dto.ClienteDTO;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.dto.CuentaDTO;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.service.FrontService;
 import ar.edu.unju.virtual.TP02PintorCarlos.model.service.front.CuentaFrontService;
+import ar.edu.unju.virtual.TP02PintorCarlos.util.SessionUtil;
 import ar.edu.unju.virtual.TP02PintorCarlos.view.bean.CuentaBean;
 
 @Named("cuentaCtrl")
@@ -32,6 +33,9 @@ public class CuentaController {
   private List<CuentaDTO> filteredCuentas;
   private CuentaDTO currCuenta;
   private final static String[] estados;
+  
+  @Autowired
+  private SessionUtil sessionUtil;
   
   @Autowired
   private FrontService frontService;
@@ -51,6 +55,9 @@ public class CuentaController {
   @PostConstruct
   public void postConstruct() {
     cuentas = cuentaFrontService.findAll();
+    ClienteDTO cliente = (ClienteDTO) sessionUtil.get("curr_cliente");
+    
+    bean.setTitular(cliente != null ? cliente.getNombre() : null);
     LOG.info("POSTCONSTRUCT");
   }
   
@@ -114,7 +121,7 @@ public class CuentaController {
 	  bean.setsaldoActual(0d);
 	  
 	  // Titular.
-	  bean.setTitular();
+	  //bean.setTitular();
 	  
 	  cuentaFrontService.save(bean);
 	  
